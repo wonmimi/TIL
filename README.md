@@ -4,5 +4,5 @@
 - - - 
 
 ###Spring Boot
-- 00[inteliJ 툴 메모][https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md]
+- 00[inteliJ 툴 메모](https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md)
 
