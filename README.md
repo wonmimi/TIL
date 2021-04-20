@@ -3,6 +3,6 @@
 * 마크다운 문법과 친해지기  
 - - - 
 
-###Spring Boot
+### Spring Boot
 - 00[inteliJ 툴 메모](https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md)
 
