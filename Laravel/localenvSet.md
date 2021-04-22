@@ -1,11 +1,13 @@
 ### 라라벨 로컬 환경 컴포저 셋팅
 - sfrp.json 파일 수정 (tool :vsCode)
 ```json
-"ignore": [
+"uploadOnSave": false,
+"downloadOnOpen": false,
+    "ignore": [
         ".vscode",
         ".git",
-        ".DS_Store",
-        ".env"
+        "vendor",
+        ".DS_Store"
     ]
 ```
 
