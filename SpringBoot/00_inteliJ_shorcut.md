@@ -8,3 +8,4 @@
   - 테스트파일 자동생성
 - ctrl + R  : 이전 실행했던거 실행
 - cmd+P : 함수에 필요한 파라미터 뭔지 
+- option + Enter : implemets 클래스 메소드 implement 
