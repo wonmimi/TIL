@@ -1,4 +1,5 @@
 ### 중복데이터 찾기 
+- people index 에서 name이 중복(동명이인)인 데이터를 찾을경우,
 ```sql
 GET /people/_search
 {
@@ -21,4 +22,4 @@ GET /people/_search
 }
 ```
 
-https://www.python2.net/questions-145910.htm
+[참고](https://www.python2.net/questions-145910.htm)

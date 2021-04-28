@@ -2,7 +2,7 @@
 - - - 
 - useContent 
 예시 코드 
-```javascirpt
+```javaScript
 const gnb = useContent({
     source: 'site-service',
     query: {
@@ -14,7 +14,7 @@ const gnb = useContent({
 
 - useRef
 예시 코드 
-```javascirpt
+```javaScript
   const wrapper = menuTab.current;
   const wrapperRect = wrapper.getBoundingClientRect();
     ...
