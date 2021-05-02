@@ -3,7 +3,18 @@
 * 마크다운 문법과 친해지기  
 - - - 
 
+
 ### Spring Boot
-- 00 .  [inteliJ 툴 메모](https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md)
-- 01 . [Algorithm](https://github.com/wonmimi/TIL/blob/main/Algorithm/algorithms.md)
+- 00 .  inteliJ [단축키 정리](https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md)
+- 01 . [annotation](./SpringBoot/annotation.md)
+
+#
+### ElasticSearch
+- 01 . [필드 중복값 검색](./ElasticSearch/duplicate.md)
+- 02 . [test, keyword 차이](./ElasticSearch/fieldType.md)
+
+#
+### Algorithm
+- 00 . [정리](./Algorithm/algorithms.md)
+
 
