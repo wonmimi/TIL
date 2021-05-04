@@ -5,6 +5,7 @@
 
 
 ### Spring Boot
+[레퍼런스](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines)
 - 00 .  inteliJ [단축키 정리](https://github.com/wonmimi/TIL/blob/main/SpringBoot/00_inteliJ_shorcut.md)
 - 01 . [annotation](./SpringBoot/annotation.md)
 
