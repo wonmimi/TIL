@@ -16,9 +16,10 @@
   테스트 완료 후에 항상 롤백한다. 이렇게 하면 DB에 데이터가 남지 않으므로 다음 테스트에 영향을 주지
   않는다. 운영일땐 데이터 베이스에 적용된다.
   ( 테스트 코드에선 테스트 케이스 각각 적용. 트랜잭션 - 테스트 - 롤백 )
+    - 데이터 저장,변경 할경우 트랜잭션 필요
     - [사용 주의 참고 글](https://mommoo.tistory.com/92)
 
-- @Commit : 테스트 실행후 데이터 커밋.
+- @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
 
 - 컨트롤러에서 @ResponseBody 를 사용하고, 객체를 반환하면 객체가 JSON으로 변환
 
@@ -29,7 +30,11 @@
 
 - @BeforeEach : 각 테스트 실행 전에 호출. 테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
 
-
+- @GeneratedValue : DB가 자동으로 id값 생성
+```java
+@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id; // 시스템 ID
+```
   
 - - - 
 - [트랜잭션](https://devuna.tistory.com/30)

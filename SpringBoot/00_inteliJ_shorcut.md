@@ -5,9 +5,11 @@
 - cmd + 옵션 + v
 - ctrl + T :  리팩토링 관련 단축키 
   - extract method 메소드 로 빼기
+  - 변수로 빼기
+  - inline (return 변수 같을경우 통합)
 - /service 테스트 단축키 cmd + shift+ T
   - 테스트파일 자동생성
-- ctrl + R  : 이전 실행했던거 실행
+- ctrl + R  : 마지막 실행 했던것 실행 ( 테스트 or 애플리케이션 run )
 - cmd+P : 함수에 필요한 파라미터 뭔지 
 - option + Enter : implemets 클래스 메소드 implement 
 - option + cmd + l : reformat code
