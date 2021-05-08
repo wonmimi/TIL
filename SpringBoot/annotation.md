@@ -23,18 +23,19 @@
 
 - 컨트롤러에서 @ResponseBody 를 사용하고, 객체를 반환하면 객체가 JSON으로 변환
 
-- @AfterEach : 한번에 여러 테스트를 실행하면 메모리 DB에 직전 테스트의 결과가 남을 수 있다. 이렇게
-되면 다음 이전 테스트 때문에 다음 테스트가 실패할 가능성이 있다. @AfterEach 를 사용하면 각 테스트가
-종료될 때 마다 이 기능을 실행한다. 
-  (테스트는 각각 독립적으로 실행되어야 한다. 테스트 순서에 의존관계가 있는 것은 좋은 테스트가 아님)
-
-- @BeforeEach : 각 테스트 실행 전에 호출. 테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
-
 - @GeneratedValue : DB가 자동으로 id값 생성
 ```java
 @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id; // 시스템 ID
 ```
+
+- @Aspect : [AOP](./AOP.md) 에서 사용
+- Advice 5종류 
+  - @BeforeEach : Target 메서드 호출 이전에 적용. 테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.  ( = @Before)
+  - @AfterRunning : Target 메서드가 성공적으로 실행되고, 결과값 리턴한 뒤 적용
+  - @AfterThrowing : Target 메서드에서 예외 발생 이후 적용(try/catch의 catch)
+  - @AfterEach : Target 메서드에서 예외 발생에 관계없이 적용 ( = @After)
+  - @Around : Target 메서드 호출 이전과 이후 모두 적용(메서드의 호출 자체를 제어할 수 있어 가장 강력)
   
 - - - 
 - [트랜잭션](https://devuna.tistory.com/30)
