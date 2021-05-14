@@ -17,4 +17,7 @@
   ![img](../img/buildSetting.png)
 
 - ### maven / Gradle 차이
-(참고 링크)[https://mylupin.tistory.com/39]
+  참고 [링크](https://mylupin.tistory.com/39)
+
+- ### thymeleaf 템플릿 엔진 
+  레퍼런스 [링크](https://www.thymeleaf.org/)
