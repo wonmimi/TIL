@@ -1,4 +1,6 @@
 ### @ annotation 정리 
+- @SpringBootApplication : 해당 위치부터 설정을 읽으면서 
+스프링 Bean , 생성 모두 자동설정하여 항상 메인클래스(프로젝트 최상단)에 위치
 -  @Autowired : 생성자에 있으면 객체 생성 시점에 스프링이 연관된 객체를 스프링 컨테이너에서 해당 스프링빈을 찾아서 주입한다.
   객체 의존관계를 외부에서 넣어주는 것을 [DI (Dependency Injection)](./DI.md), 의존성 주입이라 한다.
     - 생성자가 1개만 있으면 @Autowired 는 생략할 수 있다.
@@ -21,7 +23,18 @@
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
 
-- 컨트롤러에서 @ResponseBody 를 사용하고, 객체를 반환하면 객체가 JSON으로 변환
+- @GetMapping("/hello") : http GET 메소드 요청 api  ( = @RequestMapping)
+
+- @RequestParam : 외부에서 api 로 넘긴 파라미터 가져오는 어노테이션 
+  ```java
+  @GetMapping("hello/dto")
+    public HelloResponseDto helloDto(@RequestParam("name") String name, @RequestParam("amount") int amount){
+        return new HelloResponseDto(name, amount);
+    }
+  ```
+
+- @RestController : json 반환하는 컨트롤러로 만들어줌 
+  -  @ResponseBody로 메소드마다 선언하던걸 한번에 사용할수있게 해줌 
 
 - @GeneratedValue : DB가 자동으로 id값 생성
 ```java
@@ -36,6 +49,10 @@
   - @AfterThrowing : Target 메서드에서 예외 발생 이후 적용(try/catch의 catch)
   - @AfterEach : Target 메서드에서 예외 발생에 관계없이 적용 ( = @After)
   - @Around : Target 메서드 호출 이전과 이후 모두 적용(메서드의 호출 자체를 제어할 수 있어 가장 강력)
+
+- @RequiredArgsConstructor : 선언된 모든 final 필드의 생성자를 생성해줌
+- 접근지정자 final : 상수선언 할떄 사용(static final). 상속과 변경 금지 
+  - 클래스일경우 오버라이딩 X
   
 - - - 
 - [트랜잭션](https://devuna.tistory.com/30)

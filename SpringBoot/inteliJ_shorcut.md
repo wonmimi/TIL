@@ -14,3 +14,6 @@
 - option + Enter : implemets 클래스 메소드 implement 
 - option + cmd + l : reformat code
 - sout + enter = System.out.println() 자동완성
+- cmd + shift + A : Action 검색창 열기
+- cmd + K : 깃 커맨드창 열기
+- cmdm + shift + K : 깃 푸시창 오픈

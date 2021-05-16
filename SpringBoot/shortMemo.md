@@ -7,9 +7,30 @@
 - ### 롬복 셋팅 
   - Prefrences > plugin > lombok 설치
   - Prefrences > Annotation Processors > Enable annotation processing 체크 (재시작)
+    
   ![img](../img/lombok1.png)
+      : 프로젝트별 설정 해줘야함
   - 임의의 테스트 클래스를 만들고 @Getter, @Setter 확인
   ![img](../img/lombok2.png)
+
+  - !! 적용을 했는데도 생성자가 제대로 생성이 안된경우
+  ```bash
+  error: variable name not initialized in the default constructor private final String name;
+  ```
+  에는 build.gradle 에서 annotationProcesser을 추가한다 
+  ```java
+  dependencies {
+        annotationProcessor 'org.projectlombok:lombok'
+        implementation 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.projectlombok:lombok'
+    }
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+  ```
 
 - ### InteliJ Gradle 대신 자바 직접 실행
   - 기본 설정인 Gradle 로 실행하면 속도가 느림 
@@ -21,3 +42,6 @@
 
 - ### thymeleaf 템플릿 엔진 
   레퍼런스 [링크](https://www.thymeleaf.org/)
+
+- ### 내장 WAS 사용 
+  외장 으로 사용하지 않기때문에 서버 변동 (버전 업)이 있을경우에도 무리가 없다. 
