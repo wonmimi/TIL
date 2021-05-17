@@ -1,10 +1,18 @@
 ## JPA (Java Persistence API) 
-- 객체 + ORM(
+- 객체지향 + ORM(Object Relational Mapping)
+    - 객체지향 언어 (java, C++ .. )와 관계형 데이터베이스(Oracle, MySql ...)의 패러다임을 사이에서 일치시켜줌
+    - 객체지향 프로그래밍을 하면서 JPA가 RDBMS에 맞게 SQL을 대신생성
+      => sql에 종속되어 개발하지 않아도된다 (기존 sql Mapper 형태)
 - 기존의 반복 코드는 물론이고, 기본적인 SQL도 JPA가 직접 만들어서 실행해준다
 - SQL과 데이터 중심의 설계 => 객체 중심의 설계 
 - 인터페이스 제공. 구현체로 hibernate ... 여러개 있다.
 - JPA를 통한 모든 데이터 변경은 트랜잭션 안에서 실행해야 한다 ( => 서비스 계층에 트랜잭션 추가 )
   - 스프링은 해당 클래스의 메서드를 실행할 때 트랜잭션을 시작하고, 메서드가 정상 종료되면 트랜잭션을커밋. 런타임 예외가 발생하면 롤백
 - __스프링 데이터 JPA__ [정리](./springDataJPA.md) 프레임워크를 더하면 , 리포지토리에 구현 클래스 없이 인터페이스 만으로 개발 하여 반복코드를 줄일 수 있다. (jpa 선행 필수)
+- JPA (인터페이스) <- Hibernate (구현체) <- Spring Data JPA (구현체 추상화)
+  - 구현체, 저장소(DB) 교체가 용이해서 Spring Data JPA 사용
+  - Spring Data의 하위 프로젝트틀은 기본적인 CRUD 인터페이스가 동일 (save(), findAll() ... )
+    => 하위 Ex) Spring Data JPA , Spring Data MongoDB , Spring Data Redis ... 
+- 높은 트래픽 , 대용량 데이터 처리 서비스에 적격
 
 ### [setting](./setting.md)

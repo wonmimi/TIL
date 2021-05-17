@@ -5,6 +5,7 @@
   - application run 후, localhost:8080 접속
   
 - ### 롬복 셋팅 
+  - 자주사용하는 코드 (Getter, Setter, 생성자 , toString ...)등을 [어노테이션](./annotation.md)으로 자동생성
   - Prefrences > plugin > lombok 설치
   - Prefrences > Annotation Processors > Enable annotation processing 체크 (재시작)
     
