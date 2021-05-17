@@ -14,5 +14,46 @@
   - Spring Data의 하위 프로젝트틀은 기본적인 CRUD 인터페이스가 동일 (save(), findAll() ... )
     => 하위 Ex) Spring Data JPA , Spring Data MongoDB , Spring Data Redis ... 
 - 높은 트래픽 , 대용량 데이터 처리 서비스에 적격
+-  Repository 는 엔티티 와 함께 위치해야한다 ( Mybatis에서 Dao(Data Access Object)와 동일)
+
+## 관련 annotation 
+- @Entity : 테이블과 링크될 클래스 , 클래스의 카멜케이스 이름을 언더스코어 네이밍 (camel_case) 으로 테이블 이름과 매칭. 
+  - 엔티티 클래스는 Setter메소드를 만들지않는다
+  - 기본적으로 생성자를 통해 값을 넣고, public 메소드를 호출하여 값 변경
+- @Id : 해당 테이블의 PK필드
+- @GeneratedValue(strategy = GenerationType.IDENTITY) : PK의 생성 규칙 
+  - 2.0에서는 IDENTITY 추가해야 auto_increment
+- @Column(length = 500, nullable = false)  : 테이블릐 컬럼. 선언하지 않아도 클래스의 필드는 모두 컬럼이 된다. 
+  - 각 타입의 기본값 외에 추가 변경이 필요한 옵션이 있을경우 사용
+  ```java
+  @Getter
+  @NoArgsConstructor //  기본생성자 자동추가
+  @Entity 
+  public class Posts {
+      @Id 
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+      private Long id;
+
+      @Column(length = 500, nullable = false)
+      private String title;
+
+      @Column(columnDefinition = "TEXT", nullable = false)
+      private String content;
+
+      private String author;
+
+      @Builder
+      public Posts(String title, String content, String author){
+          this.title = title;
+          this.content = content;
+          this.author = author;
+      }
+  }
+  ```
+
+
+
+
+
 
 ### [setting](./setting.md)

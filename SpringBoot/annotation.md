@@ -53,6 +53,15 @@
 - @RequiredArgsConstructor  : 선언된 모든 final 필드의 생성자를 생성해줌 (롬복)
 - 접근지정자 final : 상수선언 할떄 사용(static final). 상속과 변경 금지 
   - 클래스일경우 오버라이딩 X
+
+#### 롬복 관련 annotation
+- @Getter : 클래스 내 모든필드 Getter 메소드 자동생성
+- @NoArgsConstructor : 기본생성자 자동추가 = public Posts(){ }
+- @Builder : 빌드 패턴 클래스 생성 , 생성자 상단에 선언시 생성자에 포함된 필드만 빌더에 포함
+  - 생성시점에 값을 채워주는 역할(= 생성자와 유사), 필드 값 명확
+
+
+
   
 - - - 
 - [트랜잭션](https://devuna.tistory.com/30)
