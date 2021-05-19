@@ -3,4 +3,10 @@
 - 보통 필드 주입, setter 주입, 생성자 주입 이렇게 3가지 방법이 있다. 
 - 의존관계가 실행중에 동적으로 변하는 경우는 거의 없으므로 생성자 주입을 권장
 
+#### Bean 주입 방식
+1) @AutoWired
+2) setter
+3) 생성자 (권장 방식)
+  - [@RequiredArgsConstructor](./annotation.md)
+
 [참고링크](https://velog.io/@gillog/Spring-DIDependency-Injection)

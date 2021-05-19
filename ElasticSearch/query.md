@@ -1,6 +1,8 @@
 - 빈값 찾기 
 
-people_backup 인덱스에서 image_url이 "" 인데이터 조회
+인덱스에서 image_url이 "" 인데이터 조회
+#
+ex) 
 ```sql
 GET /people_backup/_search
 {
