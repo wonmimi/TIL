@@ -23,7 +23,12 @@
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
 
+#
+컨트롤러 매핑
 - @GetMapping("/hello") : http GET 메소드 요청 api  ( = @RequestMapping)
+- @PostMapping
+- @PutMapping
+-  @PathVariable , @RequestBody 파라미터 
 
 - @RequestParam : 외부에서 api 로 넘긴 파라미터 가져오는 어노테이션 
   ```java
@@ -62,3 +67,4 @@
   
 - - - 
 - [트랜잭션](https://devuna.tistory.com/30)
+- [더티체킹](https://jojoldu.tistory.com/415)
