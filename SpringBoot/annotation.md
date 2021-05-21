@@ -10,9 +10,6 @@
   컴포넌트를 포함하는 다음 애노테이션도 스프링 빈으로 자동 등록된다. 
   @Component > @Controller, @Service, @Repository
   기본적으로 하나씩 등록하는 싱글톤으로 등록 
-  
-
-- @SpringBootTest : 스프링 컨테이너와 테스트를 함께 실행한다.
 
 - @Transactional : __테스트 케이스__에 이 애노테이션이 있으면, 테스트 시작 전에 트랜잭션을 시작하고,
   테스트 완료 후에 항상 롤백한다. 이렇게 하면 DB에 데이터가 남지 않으므로 다음 테스트에 영향을 주지
@@ -23,8 +20,8 @@
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
 
-#
-컨트롤러 매핑
+
+### 컨트롤러 매핑 관련
 - @GetMapping("/hello") : http GET 메소드 요청 api  ( = @RequestMapping)
 - @PostMapping
 - @PutMapping
@@ -91,8 +88,15 @@ public class Posts extends BaseTimeEntity {
  . . . 
 }
 ```
-
-
+### 테스트 코드 관련
+- @SpringBootTest : 스프링 컨테이너와 테스트를 함께 실행한다.
+  - ex) 랜덤포트 사용 : @SpringBootTest(webEnvironment = RANDOM_PORT)
+- @RunWith : JUnit 외에 내장된 실행자 실행시킴.
+스프링 부트테스트와 JUnit 사이에 연결자 역할 
+  - ex) SpringRunner 스프링 실행자 사용 : @RunWith(SpringRunner.class)
+- @webMvcTest : Spring MVC 웹에 집중. 
+  - @Controller, @controllerAdvice ...를 사용
+  - @Service, @Component, @Repository 사용 X
 
 
   
