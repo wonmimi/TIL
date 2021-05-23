@@ -50,7 +50,11 @@
       }
   }
   ```
-
+- @Query : springDataJPA 에서 제공하지 않는 메소드에 쿼리로 사용 
+```java
+   @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
+    List<Posts> findAllDesc();
+```
 
 
 
