@@ -1,4 +1,5 @@
-### Optional<> 객체
+### Optional< T > 객체
+null이 올 수 있는 값을 감싸는 Wrapper 클래스로, 참조하더라도 NPE(NullPointerException)가 발생하지 않도록 도와준다
 
 ex) 소스 코드 
 
@@ -22,4 +23,5 @@ ex) 소스 코드
 
 ```
 
-[참고](http://www.tcpschool.com/java/java_stream_optional)
+[참고_1](http://www.tcpschool.com/java/java_stream_optional) / 
+[참고_2](https://mangkyu.tistory.com/70)

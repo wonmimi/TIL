@@ -10,3 +10,5 @@ List<Dog> dogs2 = names.stream()
                 .map(Dog::new) // 적용 후
                 .collect(Collectors.toList());
 ```
+
+- 상속 extends, implements 차이 [참고](https://velog.io/@hkoo9329/%EC%9E%90%EB%B0%94-extends-implements-%EC%B0%A8%EC%9D%B4)
