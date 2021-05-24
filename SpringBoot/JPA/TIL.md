@@ -55,7 +55,7 @@
    @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
 ```
-- @Enumerated : 데이터베이스에 저장할 enum 데이터 형태 지정
+- @Enumerated : 데이터베이스에 저장할 enum(열거형) 데이터 형태 지정
   - 기본적으로 int형 => DB에서 확인할떄 무슨코드인지 의미 알수 없다 
   - @Enumerated(EnumTypes.STRING)으로 문자열 선언
 

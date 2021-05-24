@@ -20,6 +20,7 @@
   - [사용 주의 참고 글](https://mommoo.tistory.com/92)
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
+- @EnableWebSecurity : 스프링 시큐리티 설정 활성화
 
 
 ### 컨트롤러 매핑 관련
