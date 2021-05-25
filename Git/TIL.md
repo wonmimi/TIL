@@ -1,4 +1,4 @@
-### .gitignore에 추가한 파일명이 커밋 내역에 반영이 안될떄 
+### .gitignore에 추가한 파일명이 커밋 내역에 반영이 안될때
 깃 캐시 제거 
 ```bash
 git rm -r --cached .
@@ -19,3 +19,16 @@ git commit -m "커밋 메세지"
 ```
 
 [참고](https://stackoverflow.com/questions/11451535/gitignore-is-ignored-by-git)
+
+### 슬랙 깃 알림 설정 
+슬랙 알림 체널 메신저 창에서 
+``` shell
+#깃헙봇 추가 
+/invite @GitHub
+
+#깃헙 구독 추가 
+/github subscribe [계정]/[저장소]
+
+#깃헙 구독 해제 
+/github unsubscribe [계정]/[저장소]
+```
