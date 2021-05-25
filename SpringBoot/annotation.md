@@ -21,6 +21,12 @@
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
 - @EnableWebSecurity : 스프링 시큐리티 설정 활성화
+- @interface : 어노테이션 클래스 생성 
+```java
+public @interface LoginUser {
+}
+ //  = LoginUser 어노테이션 생성
+```
 
 
 ### 컨트롤러 매핑 관련
