@@ -1,4 +1,4 @@
-### @ annotation 정리 
+## @ annotation 정리 
 - @SpringBootApplication : 해당 위치부터 설정을 읽으면서 
 스프링 Bean , 생성 모두 자동설정하여 항상 메인클래스(프로젝트 최상단)에 위치
 -  @Autowired : 생성자에 있으면 객체 생성 시점에 스프링이 연관된 객체를 스프링 컨테이너에서 해당 스프링빈을 찾아서 주입한다.
@@ -20,14 +20,13 @@
   - [사용 주의 참고 글](https://mommoo.tistory.com/92)
 
 - @Commit : 실행후 데이터 커밋 (테스트 실행시에도)
-- @EnableWebSecurity : 스프링 시큐리티 설정 활성화
 - @interface : 어노테이션 클래스 생성 
 ```java
 public @interface LoginUser {
 }
  //  = LoginUser 어노테이션 생성
 ```
-
+#
 
 ### 컨트롤러 매핑 관련
 - @GetMapping("/hello") : http GET 메소드 요청 api  ( = @RequestMapping)
@@ -60,6 +59,8 @@ public @interface LoginUser {
   - @AfterEach : Target 메서드에서 예외 발생에 관계없이 적용 ( = @After)
   - @Around : Target 메서드 호출 이전과 이후 모두 적용(메서드의 호출 자체를 제어할 수 있어 가장 강력)
 
+#
+
 ### 롬복 관련 annotation
 - @Getter : 클래스 내 모든필드 Getter 메소드 자동생성
 - @NoArgsConstructor : 기본생성자 자동추가 = public Posts(){ }
@@ -69,7 +70,7 @@ public @interface LoginUser {
 
 
 #
-### JPA auditing 관련
+### [JPA](./JPA/TIL.md) auditing 관련
 - @MappedSuperclass : JPA entity 클래스(Posts)가 해당 클래스(BaseTimeEntity)를 상속할 경우 저장시간 관련(createdDate, modifiedDate) 필드들도 칼럼으로 인식 된다
 - @EntityListeners(AuditingEntityListener.class) : 클래스에 Auditing 기능 포함
 - @CreatedDate : 엔티티 생성되어 저장될때 시간 자동저장
@@ -96,7 +97,9 @@ public class Posts extends BaseTimeEntity {
  . . . 
 }
 ```
-### 테스트 코드 관련
+#
+
+### [테스트](./TDD.md) 코드 관련
 - @SpringBootTest : 스프링 컨테이너와 테스트를 함께 실행한다.
   - ex) 랜덤포트 사용 : @SpringBootTest(webEnvironment = RANDOM_PORT)
 - @RunWith : JUnit 외에 내장된 실행자 실행시킴.
@@ -106,8 +109,14 @@ public class Posts extends BaseTimeEntity {
   - @Controller, @controllerAdvice ...를 사용
   - @Service, @Component, @Repository 사용 X
 
+#
+### [시큐리티](./SpringSecurity/TIL.md) 관련 
+- @EnableWebSecurity : 스프링 시큐리티 설정 활성화
+- @WithMockUser(roles = "USER") : 사용자(user) 인증 Mock 데이터 만들어준다.
+  * mockMvc 객체에서만 작동
 
-  
-- - - 
+
+ #
+
 - [트랜잭션](https://devuna.tistory.com/30)
 - [더티체킹](https://jojoldu.tistory.com/415)
