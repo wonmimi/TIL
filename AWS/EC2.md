@@ -27,16 +27,21 @@ vi ~/.ssh/config
 
 # config 권한 변경
 chmod 700 ~/.ssh/config
+```
 
-# EC2 접속
+EC2 접속
+```zsh
 ssh wonmimi-webservice-aws (config에 등록한 Host명)
 ```
+![접속 성공시](../img/ec2-hostname-before.png)
 
 #### 2. 자바 기반 웹 애플리케이션 설정
 1) java설치 
   ```zsh
   # 자바 8 설치 
   sudo yum install -y java-1.8.0-openjdk-devel.x86_6
+  # 자바 11인경우
+  sudo amazon-linux-extras install java-openjdk11
 
   # 인스턴스 자바 버전 설정
   sudo /usr/sbin/alternatives --config java
@@ -51,3 +56,44 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
     sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
   ```
 3) 호스트네임 변경
+```zsh
+  # config 파일 수정
+  sudu vim /etc/sysconfig/network
+
+  #HOSTNAME 추가 (또는 변경)
+  NETWORKING=yes
+  NOZEROCONF=yes
+  HOSTNAME=wonmimi-webservice-aws
+```
+
+ \** amazone ami2 인 경우, 
+```zsh
+  sudo hostnamectl set-hostname 등록할 호스트명
+```
+ 서버 재부팅 (후 변경된 HOSTNAME 확인)
+```zsh
+  sudu reboot
+```
+  * 재접속 하여 hostname 확인 
+![접속 시](../img/ec2_hostname_2.png)
+  * /etc/hosts 에 hostname 등록
+```zsh
+  sudo vim /etc/hosts
+
+  # hostname 작성
+  127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+  ::1         localhost6 localhost6.localdomain6
+
+  127.0.0.1       wonmimi-webservice-aws
+```
+  * 등록 확인 
+  ```zsh
+    curl wonmimi-webservice-aws (등록 HOSTNAME)
+  ```
+  * 80포트 접근에러가 뜨면 등록 OK
+  ![curl](../img/ec2_curl.png)
+
+  ```zsh
+  curl: (7) Failed to connect to wonmimi-webservice-aws port 80: Connection refused
+  ```
+  아직 80포트로 실행된 서비스가 없음. curl 포스트 실행은 OK
