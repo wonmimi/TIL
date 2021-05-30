@@ -35,7 +35,8 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
 ```
 ![접속 성공시](../img/ec2-hostname-before.png)
 
-#### 2. 자바 기반 웹 애플리케이션 설정
+#### 2. 아마존 리눅스 서버 생성시 필수 설정 
+\+ 자바 기반 웹 애플리케이션
 1) java설치 
   ```zsh
   # 자바 8 설치 
@@ -66,7 +67,7 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
   HOSTNAME=wonmimi-webservice-aws
 ```
 
- \** amazone ami2 인 경우, 
+ \** amazone ami2 인 경우, [참고](https://vkein.tistory.com/entry/%EC%95%84%EB%A7%88%EC%A1%B4-EC2-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
 ```zsh
   sudo hostnamectl set-hostname 등록할 호스트명
 ```
