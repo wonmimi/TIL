@@ -35,6 +35,11 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
 ```
 ![접속 성공시](../img/ec2-hostname-before.png)
 
+접속 종료시
+```zsh
+  exit
+```
+
 #### 2. 아마존 리눅스 서버 생성시 필수 설정 
 \+ 자바 기반 웹 애플리케이션
 1) java설치 
@@ -98,3 +103,47 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
   curl: (7) Failed to connect to wonmimi-webservice-aws port 80: Connection refused
   ```
   아직 80포트로 실행된 서비스가 없음. curl 포스트 실행은 OK
+
+  #### 3. EC2 서버에 프로젝트 배포
+  ec2에 깃 설치
+  ```zsh
+  sudo yum install git
+  ```
+  설치후 깃 버전 확인
+  ```zsh
+  git --version
+  ```
+  ![ec2_install_git](../img/ec2_install_git.png)
+
+  git clone 할 디렉토리 생성 후 이동
+  ```zsh
+    mkdir ~/app && mkdir ~/app/step1
+    cd ~/app/step1
+  ```
+  클론할 저장소 https URl 복사 (\* 저장소 public 확인 )
+  ```zsh
+    git clone [저장소 url]
+    #git clone https://github.com/wonmimi/spring-aws-toy.git
+
+  복사된 저장소 이동
+  cd [프로젝트명]
+  # cd spring-aws-toy
+  ```
+  디렉토리 확인
+  ![ec2-git-clone](../img/ec2-git-clone.png)
+
+  테스트 실행 
+  ```zsh
+    ./gradlew test 
+  ```
+  - gradlew Permission Denied 인 경우 권한 추가 후 테스트
+    ```zsh
+      # 권한 추가 
+      chmod +x ./gradlew
+    ```
+  테스트 통과시, 
+  ![ec2-git-gradle-test](../img/ec2-git-gradle-test.png)
+
+  - 테스트 실패하였을경우, 프로젝트 소스 수정후 깃푸시 => EC2에서 git pull 하여 다시 테스트 실행 
+
+ \* EC2엔 gradle이 설치되어있지 않지만, wrapper파일인 gradlew이 gradle이을 쓸수있도록 지원해준다.(해당 프로젝트에 한해서)
