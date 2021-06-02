@@ -104,7 +104,7 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
   ```
   아직 80포트로 실행된 서비스가 없음. curl 포스트 실행은 OK
 
-  #### 3. EC2 서버에 프로젝트 배포
+  #### 3-1. EC2 서버에 프로젝트 배포
   ec2에 깃 설치
   ```zsh
   sudo yum install git
@@ -147,3 +147,87 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
   - 테스트 실패하였을경우, 프로젝트 소스 수정후 깃푸시 => EC2에서 git pull 하여 다시 테스트 실행 
 
  \* EC2엔 gradle이 설치되어있지 않지만, wrapper파일인 gradlew이 gradle이을 쓸수있도록 지원해준다.(해당 프로젝트에 한해서)
+
+ #### 3-2. 배포 스크립트 만들기
+  다음 1)~3) 모두 포괄하는게 배포 
+  1) git clone 또는 pull 하여 프로젝트를 받음
+  2) gradle 또는 maven을 통해 프로젝트 테스트와 빌드
+  3) EC2 서버에서 프로젝트 실행
+
+  - 스크립트를 통해 차례로 진행할 수 있도록한다 
+    * 쉘(shell) 스크립트 파일 (.sh) : 리눅스에서 기본적으로 사용하는 스크립트 파일 종류중 하나
+      - 타입없이 선언 , $변수명으로 변수 사용
+    * vim (=vi): 리눅스환경에서 ( = GUI가 아닌 ) 사용할 수 있는 편집도구
+  
+  - ~/app/step1에 deploy. sh 파일 생성 
+  ```zsh
+    vim ~/app/step1/deploy.sh
+  ```
+  deploy. sh 파일
+
+  ```Shell
+  #!/bin/bash
+
+  REPOSITORY=/home/ec2-user/app/step1
+  PROJECT_NAME=spring-aws-toy  ( = clone 한 프로젝트이름)
+
+  cd $REPOSITORY/$PROJECT_NAME
+
+  echo "> Git pull"
+  git pull
+
+  echo "> 프로젝트 build 시작"
+  # gradlew로 build 실행
+  ./gradlew build
+
+  echo "> step1 디렉토리 이동"
+  cd $REPOSITORY
+
+  echo "> build 파일 복사"
+  cp $REPOSITORY/$PROJECT_NAME/build/libs/*.jar $REPOSITORY/
+
+  echo "> 현재 구동중인 애플리케이션 pid 확인"
+  CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
+
+  # -z : 빈문자열이면 true
+  if      [ -z "$CURRENT_PID" ]; then
+          echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
+  else
+          echo "> kill -15 $CURRENT_PID"
+          kill -15 $CURRNET_PID
+          sleep 5
+  fi
+
+  echo "> 새 애플리메이션 배포"
+  JAR_NAME=$(ls -tr $REPOSITORY | grep jar | tail -n 1)
+
+  echo "> JAR NAME : $JAR_NAME"
+  nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
+  ```
+  ❗️[리눅스 명령어](../Linux/command.md) ❕
+
+ 스크립트에 실행(x)권한 추가 (pwd : /app/step1)
+```zsh
+ chmod +x ./deploy.sh
+ ```
+  ![ec2-배포](../img/ec2-배포-sh.png)
+
+ 스크립트 실행 
+ ```zsh
+ ./deploy.sh
+```
+실행시 작성한 로그 출력하며 애플리케이션 실행
+  ![ec2-배포](../img/ec2-배포-sh-deploy.png)
+👀 👉🏻 nohup: appending output to `nohup.out' 에러 메세지 확인
+
+nohup.out 파일 열어 로그 확인 
+![ec2-배포](../img/ec2-배포-nohup.png)
+```zsh
+vi nohup.out
+```
+![ec2-배포](../img/ec2-배포-nohup-vi.png)
+
+
+
+- - - 
+[쉘스크립트 if](https://lxstitch.tistory.com/65)
