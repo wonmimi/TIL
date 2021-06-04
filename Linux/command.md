@@ -82,6 +82,7 @@ CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
   - n + N : N번째줄 이후부터
 [참고](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=yoodh0713&logNo=221596485819)
 
+- - - 
 ### 5. nohub
 : 터미널을 종료해도 애플리케이션이 계속 실행될수있도록 백그라운드에서 실행 시키는 명령어
 ```zsh
@@ -89,4 +90,15 @@ CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
   ```
 
 [참고](https://ourcstory.tistory.com/197)
+
+- - - 
+### 6. 다중명령어
+- | (파이프) : 앞에 명령한 출력 결과가 뒤 명령의 입력으로 실행 하겨 여러 명령어 연결( = 파이프라인 )
+
+- && : 앞에 명령이 정상적으로 실행됐을때 뒤에 명령어 실행
+
+- ; (세미콜론) : 앞에 명령 실행 성공여부 상관없이 뒤에 명령어 실행
+<br>
+
+[참고](https://jhnyang.tistory.com/66)
 <!-- ### curl  -->
