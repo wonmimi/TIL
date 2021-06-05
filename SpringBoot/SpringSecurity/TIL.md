@@ -7,7 +7,7 @@
 - 로그인, 로그아웃 url을 기본적으로 제공하기떄문에 해당 컨트롤러를 만들필요가없다 (별도 지정도 가능)
   * /oauth2/authorization/[소셜 로그인]
   * ex) 구글로그인 /oauth2/authorization/google , 로그아웃 /logout
-- [구글 클라우드 플랫폼](https://console.cloud.google.com)
+- 구글은 [구글 클라우드 플랫폼](https://console.cloud.google.com) 에서 client-id, client-secret 값 발급
 
 ### 세션 저장소 
 1) WAS(톰캣) 세션 사용
