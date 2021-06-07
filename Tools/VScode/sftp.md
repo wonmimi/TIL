@@ -3,7 +3,7 @@
 파일 업로드를 하는데 갑자기 뜬 에러 메세지.
 서버 업로드엔 지장이 없었음.
 
-![이미지 파일](../img/vscode_error.png)
+![이미지 파일](../../img/vscode_error.png)
 
 ```bash
 [05-14 11:06:52] [error] Error: No such file

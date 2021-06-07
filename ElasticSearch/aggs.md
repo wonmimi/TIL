@@ -68,9 +68,9 @@ GET /articles/_search
 }
 ```
 
-결과 <br> 
+[ 결과 ] <br> 
 키 field : regdate값을 desc 순으로 데이터 group by 
-doc_count로 hits별 갯수 확인하기 용이 
+doc_count로 hits별 갯수 확인하기 용이 (keyed : true = 객체 키값으로 필드값 출력 ) 
 ![aggs-date](../img/ELS-aggs-date.png) 
 
 [참고 - aggs range](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-range-aggregation.html) <br>
