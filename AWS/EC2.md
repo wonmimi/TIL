@@ -194,7 +194,7 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
           echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
   else
           echo "> kill -15 $CURRENT_PID"
-          kill -15 $CURRNET_PID
+          kill -15 $CURRENT_PID
           sleep 5
   fi
 
@@ -218,16 +218,51 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
 ```
 실행시 작성한 로그 출력하며 애플리케이션 실행
   ![ec2-배포](../img/ec2-배포-sh-deploy.png)
-👀 👉🏻 nohup: appending output to `nohup.out' 에러 메세지 확인
+ nohup: appending output to `nohup.out' 메세지와 함께 해당 프로그램의 표준출력이 nohup.our 에 출력된다
 
 nohup.out 파일 열어 로그 확인 
 ![ec2-배포](../img/ec2-배포-nohup.png)
 ```zsh
 vi nohup.out
 ```
+에러 메세지 확인 
 ![ec2-배포](../img/ec2-배포-nohup-vi.png)
+: ClientRegistrationRepository를 생성하려면 clientId 와 clientSecret 값이 필수 <br>
+BUT,  auth 정보가있는 .properties 파일은 .gitignore라 깃소스엔 없음
 
+#### 4. 외부 Security 파일 등록
+- 저장소에 올릴수 없으므로 (외부 노출 위험) 서버에서 직접 가져올수있도록 처리 
+  * (Travis CI는 비용 추가 하면 프라이빗 저장소 사용 가능)
+<br>
 
+properties파일 생성 (pwd: /app)
+```zsh
+  vim /home/ec2-user/app/application-oauth.properties
+```
+(깃에 올린)프로젝트의 application-oauth.ptoperties 파일 내용을 그대로 복붙하여 저장 <br>
+생성한 properties 파일을 쓰도록 deploy.sh 파일 수정
+```zsh
+  vi ~/app/ste1/deploy.sh
+```
+deplosy.sh
+```shell
+... 
+  nohup java -jar \-Dspring.config.location=classpath:/application.properties,
+  \ $REPOSITORY/$JAVA_HOME 2>&1 &
+```
+  * Dspring.config.locatio : 스프링 설정파일 위치 지정
+
+  수정후 deploy.sh 실행 
+  ```zsh
+    ./deploy.sh
+  ```
+  nohup.out vim 출력하여 정상실행 확인 확인 
+![ec2-배포](../img/ec2-security-nohup.png)
+
+\* 현재 실행중인 8080 PID 확인
+```zsh
+  netstat -ntlp | grep :8080
+```
 
 - - - 
 [쉘스크립트 if](https://lxstitch.tistory.com/65)

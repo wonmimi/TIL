@@ -89,7 +89,9 @@ CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
   nohup [명령]  2>&1 &
   ```
 
-[참고](https://ourcstory.tistory.com/197)
+[참고](https://joonyon.tistory.com/98)<br>
+\+  [2>&1  참고](https://ourcstory.tistory.com/197)
+
 
 - - - 
 ### 6. 다중명령어
