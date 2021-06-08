@@ -235,7 +235,7 @@ BUT,  auth 정보가있는 .properties 파일은 .gitignore라 깃소스엔 없�
   * (Travis CI는 비용 추가 하면 프라이빗 저장소 사용 가능)
 <br>
 
-properties파일 생성 (pwd: /app)
+properties파일 생성 (pwd: /app 후에 step2,step2 에서도 사용 위해)
 ```zsh
   vim /home/ec2-user/app/application-oauth.properties
 ```

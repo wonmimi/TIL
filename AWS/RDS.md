@@ -100,3 +100,30 @@ show variables like 'c%';
 <center> - 접속   - </center>
 
 ![ec2_rds_connect](../img/ec2_rds_접속.png)
+
+
+### 5. 스프링 프로젝트로 RDS 접근
+#### 5-1 테이블 생성 
+ H2에서 자동으로 생성해주던 테이블을 MariaDB에서 쿼리를 통해 직접 생성
+  - 테스트 코드 돌렸을때 출력되는 h2로그 복사하여 쿼리로 사용
+![RDS-create-table](../img/RDS-create-table.png)
+```sql
+# posts
+create table posts (
+  id bigint not null auto_increment,
+  created_date datetime, modified_date datetime, 
+  author varchar(255), content TEXT not null, title varchar(500) not null,
+primary key (id)) engine=InnoDB
+
+#user 
+create table user (
+  id bigint not null auto_increment, 
+  created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null,
+primary key (id)) engine=InnoDB
+```
+
+
+  #### 5-2 프로젝트 설정 
+  : maria DB에 접근하기 위해 데이터베이스 드라이버 추가
+  #### 5-3 EC2 (리눅스 서버) 설정 
+  : 중요 정보가 포함된 접속정보 서버내부에서 관리하도록 설정
