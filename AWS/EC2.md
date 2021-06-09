@@ -80,8 +80,9 @@ ssh wonmimi-webservice-aws (config에 등록한 Host명)
 ```zsh
   sudu reboot
 ```
-  * 재접속 하여 hostname 확인 
-![접속 시](../img/ec2_hostname_2.png)
+  * 재접속 하여 hostname 확인 <br>
+  <img src = "../img/ec2_hostname_2.png" alt = "접속 시" width="50%" height="60%">
+<!-- ![접속 시](../img/ec2_hostname_2.png) -->
   * /etc/hosts 에 hostname 등록
 ```zsh
   sudo vim /etc/hosts

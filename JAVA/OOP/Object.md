@@ -23,7 +23,10 @@
 - 함수가 호출될 때 지역 변수들이 사용하는 메모리
 - 함수 실행이 끝나면 자동으로 반환 되는 메모리
 
-![stack](../../img/java-function-stack.png)
+
+<img src = "../../img/java-function-stack.png" alt = "stack" width="50%" height="70%">
+<!-- ![stack](../../img/java-function-stack.png) -->
+
 #### 2-3. 메서드 (method)
 - 객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수 = 멤버 함수 (member function)
 - 메서드의 이름은 그 객체를 사용(호출)하는 객체(=클라이언트)에 맞게 네이밍 (ex  getStudentName() )

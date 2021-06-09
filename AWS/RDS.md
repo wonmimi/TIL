@@ -6,19 +6,23 @@
 1) mariaDB , 프리티어 , 스토리지 20 설정 
   - (mariaDb : 추후, Amazon Aurora(유료)와 교체 호환성 좋음)
 2) 고유 인스턴스 식별자(이름 지정)
-![RDS_make](../img/rds_make.png)
+<img src = "../img/rds_make.png" alt = "RDS_make" width="50%" height="60%" style=
+"display: block; margin: 0 auto;">
+
 3) 퍼블릭 엑세스 - '네' 설정
   - 후에 보안그룹에서 지정된 IP 만 접근하도록 설정
-  ![RDS_make](../img/rds_make2.png)
+  <img src = "../img/rds_make2.png" alt = "RDS_make" width="50%" height="60%" style= "display: block; margin: 0 auto;">
+
 4) 이외 기본설정 유지 후 '완료'
 
 #### 2-1. 파라미터 그룹 생성
 RDS > 파라미터 그룹 생성 후 , 
-![파라미터 그룹 생성](../img/rds_parameter_group.png)
+<img src = "../img/rds_parameter_group.png" alt = "파라미터 그룹 생성" width="55%" height="50%" style= "display: block; margin: 0 auto;">
 생성한 파라미터 편집 모드 전환
 
 #### 2-2. 운영환경 맞는 파라미터 설정
-![파라미터 그룹 편집](../img/rds_parameter_group_option.png)
+<img src = "../img/rds_parameter_group_option.png" alt = "파라미터 그룹 편집" width="55%" height="50%" style= "display: block; margin: 0 auto;">
+
 1) 타임존 설정
   * time_zone : Asia/Seoul
 2) character Set
@@ -32,18 +36,19 @@ RDS > 파라미터 그룹 생성 후 ,
 #### 2-3. 파라미터그룹 - 데이터베이스 연결
   : 데이터베이스 '수정' > 파라미터 그룹 변경하여 즉시적용
 
-![파라미터 그룹 편집](../img/rds_parameter_connect.png)
+<img src = "../img/rds_parameter_connect.png" alt = "파라미터 그룹 편집" width="60%" height="50%" style= "display: block; margin: 0 auto;">
 적용이 안되면 데이터베이스 '작업' > '재부팅' 후 재확인 
 
 #### 3. 로컬 pc 에서 RDS 접속 
 - RDS 세부정보 > '보안그룹'
-![로컬 접속](../img/rds_로컬접속.png)
+<img src = "../img/rds_로컬접속.png" alt = "로컬 접속" width="60%" height="50%" style= "display: block; margin: 0 auto;">
+
 - RDS에 연결된 보안그룹의 인바운드 편집하여 내 ip와 ec2에 연결된 보안그룹 id 추가 
 
-![ec2 보안그룹](../img/ec2_보안그룹.png)
-   <center>  => ec2 연결된 보안그룹 id</center><br/>
+<img src = "../img/ec2_보안그룹.png" alt = "ec2 보안그룹" width="70%" height="50%" style= "display: block; margin: 0 auto;">
+  <center>  => ec2 연결된 보안그룹 id</center><br/>
    
-![로컬 접속](../img/rds_보안그룹_인바운드.png)
+<img src = "../img/rds_보안그룹_인바운드.png" alt = "보안그룹_인바운드" width="70%" height="50%" style= "display: block; margin: 0 auto;">
 <center> 후에 모든트래픽 항목은 삭제 함. </center>
 
 - DB 플러그인 설치
@@ -52,10 +57,10 @@ RDS > 파라미터 그룹 생성 후 ,
 
 - RDS 접속정보 등록 
 Host : RDS 엔드포인트 
-![rds_인텔리제이_연결](../img/rds_intelij_연결.png)
+<img src = "../img/rds_intelij_연결.png" alt = "rds_인텔리제이_연결" width="60%" height="50%" style= "display: block; margin: 0 auto;">
 
 연결 성공시 스키마 노출, 
-![rds_인텔리제이_연결](../img/rds_intelij_연결성공.png)
+<img src = "../img/rds_intelij_연결성공.png" alt = "rds_intelij_연결성공" width="50%" height="50%" style= "display: block; margin: 0 auto;">
 
 - 콘솔창 생성하여 database 선택
 ```sql
@@ -90,17 +95,15 @@ show variables like 'c%';
   sudo yum install mysql
 ```
 <center> - 설치 완료  - </center>
+<img src = "../img/ec2_mysql_cli.png" alt = "mysql_cli" width="65%" height="50%" style= "display: block; margin: 0 auto;">
 
-![mysql_cli](../img/ec2_mysql_cli.png)
 - mysql 접속
 ```zsh
   mysql -u [계정] -p -h Host 주소
   # = mysql -u wonmimi -p -h wonmimi-webservice-aws.csoo73r6jzcm.ap-northeast-2.rds.amazonaws.com
 ```
 <center> - 접속   - </center>
-
-![ec2_rds_connect](../img/ec2_rds_접속.png)
-
+<img src = "../img/ec2_rds_접속.png" alt = "ec2_rds_connect" width="65%" height="50%" style= "display: block; margin: 0 auto;"> <br>
 
 ### 5. 스프링 프로젝트로 RDS 접근
 #### 5-1 테이블 생성 
@@ -151,7 +154,7 @@ CREATE TABLE SPRING_SESSION_ATTRIBUTES (
 
 ```
 테이블 생성 완료
-![RDS-table-생성](../img/RDS-table-생성.png)
+<img src = "../img/RDS-table-생성.png" alt = "RDS-table-생성" width="50%" height="40%" style= "display: block; margin: 0 auto;">
 
   #### 5-2 프로젝트 설정 
   : maria DB에 접근하기 위해 데이터베이스 드라이버 추가
