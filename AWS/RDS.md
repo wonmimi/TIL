@@ -64,7 +64,7 @@ RDS > 파라미터 그룹 생성 후 ,
 - RDS 접속정보 등록 
 Host : RDS 엔드포인트 
 
-<img src = "../img/rds_intelij_연결.png" alt = "rds_인텔리제이_연결" width="60%" height="50%" style= "display: block; margin: 0 auto;">
+<img src = "../img/rds_inteliJ_연결.png" alt = "rds_인텔리제이_연결" width="60%" height="50%" style= "display: block; margin: 0 auto;">
 
 연결 성공시 스키마 노출, 
 
