@@ -17,4 +17,5 @@
 - psvm + Enter : 자바 public static void main(String[] args) 메소드 자동완성
 - cmd + shift + A : Action 검색창 열기
 - cmd + K : 깃 커맨드창 열기
-- cmdm + shift + K : 깃 푸시창 오픈
+- cmd + shift + K : 깃 푸시창 오픈
+- cmd + shift + O : 파일 검색
