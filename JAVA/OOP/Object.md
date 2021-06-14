@@ -7,7 +7,7 @@
   * 각 객체가 제공하는 기능들 간의 소통(파라미터, 객체 ... 전달)을 통하여 객체간의 협력을 구현
 - - - 
 ### 1. 클래스
-- 객체의 속성은 클래스의 멤버 변수(member variable)로, 역할을 메서드(method)로 선언
+- 객체의 속성은 클래스의 멤버 변수(member variable)로, 역할을 메서드(method)로 선언하여 정의
 - 클래스명은 대문자로 시작 (CamelCase)
 - 변수, 메서드명은 소문자로 시작
 - 한 java 파일에  여러 클래스가 있을 수 있지만 public 클래스는 오직 하나
@@ -25,11 +25,32 @@
 
 
 <img src = "../../img/java-function-stack.png" alt = "stack" width="50%" height="70%">
-<!-- ![stack](../../img/java-function-stack.png) -->
 
 #### 2-3. 메서드 (method)
 - 객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수 = 멤버 함수 (member function)
 - 메서드의 이름은 그 객체를 사용(호출)하는 객체(=클라이언트)에 맞게 네이밍 (ex  getStudentName() )
+- - - 
+### 3. 인스턴스 (instance)
+#### 3-1. 인스턴스 생성
+- 인스턴스 : 클래스를 기반으로 new 키워드를 사용하여 메모리에 생성
+  * 생성된 인스턴스는 각각 다른 멤버변수(참조변수) 값(참조값)을 가진다
+    * 참조변수 : 메모리에 생성된 인스턴스를 가리키는 변수
+    * 참조값 : 생성된 인스턴스의 메모리 주소 값
+    ```java
+       Student studentJung = new Student(); // 참조변수
+       System.out.println(studentJung); //참조값 출력 
+       //=> [패키지명].Student@1218025c  jvm이 부여한 가상주소값 
+    ```
+
+#### 3-2. 힙(heap) 메모리 (= 동적메모리)
+- 생성된 인스턴스는 힙 메모리에 할당됨
+- 자바에서 Gabage Collector 가 주기적으로 사용하지 않는 메모리를 수거
+  * C, C++에서는 해제시켜야함 (free() , delete)
+- 하나의 클래스에서 여러 인스턴스가 생성되면 각각 다른 메모리주소를 가짐
+
+<img src = "../../img/java_stack_heap.png" alt = "stack" width="50%" height="60%">
+
+
 
 
 
