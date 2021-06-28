@@ -108,8 +108,48 @@ public void setMonth(int month) {
   * hide된 속성들은 client코드 쪽에선 알 필요가 없다.
 - client코드 에서 메서드나 멤버변수에 접근함으로써 발생하는 오류 최소화 
 
+- - - 
+### 6. static 
+여러 인스턴스에서 공통으로 사용하여 메모리 공유
+#### 6-1 static (정적) 변수
 
-### 7. static
+- 처음 프로그램이 메모리에 로딩될 때 메모리를 할당하여 프로그램 종료시 해제
+
+<img src = "../../img/static변수_memory.png" alt = "static" width="50%" height="60%">
+
+- 인스턴스 생성과 상관 없이 사용 가능하므로 클래스 이름으로 직접 참조📌
+- = 클래스 변수, 정적변수라고도 함(<-> 인스턴스 변수)
+
+```java
+public class Employee {
+
+	public static int serialNum = 1000; 
+	
+	private int employeeId;
+	private String employeeName;
+	private String department;
+    ...
+}
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		Employee employeeLee = new Employee();
+		employeeLee.setEmployeeName("이순신");
+        System.out.println(Employee.serinalNum); 📌
+		
+		Employee employeeKim = new Employee();
+		employeeKim.setEmployeeName("김유신");
+		
+	}
+}
+
+```
+메모리 영역
+
+<img src = "../../img/static변수_메모리.png" alt = "static" width="60%" height="60%">
+
+
 #### 7-2. 싱글톤 패턴 (Singleton pattern)
 프로그램에서 인스턴스(객체)가 단 한 개만 생성되어야 하는 경우 사용하는 디자인 패턴
 - 서로 자원을 공유할때 주로 사용 ex) 스프링 빈 , (현실)프린터 기계
@@ -118,7 +158,9 @@ public void setMonth(int month) {
   - 생성자는 private으로 선언
   - 클래스 내부에 유일한 private 인스턴스 생성
   - 외부에서 유일한 인스턴스를 참조할 수 있는 public 메서드 제공
+- - - 
 
+### final 키워드
 
 
 
