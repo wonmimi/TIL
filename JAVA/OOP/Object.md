@@ -120,14 +120,34 @@ public void setMonth(int month) {
 - 인스턴스 생성과 상관 없이 사용 가능하므로 클래스 이름으로 직접 참조📌
 - = 클래스 변수, 정적변수라고도 함(<-> 인스턴스 변수)
 
+메모리 영역
+
+<img src = "../../img/static변수_메모리.png" alt = "static" width="60%" height="60%">
+
+#### 6-2. static 메서드 
+- 인스턴스 생성과 무관하게 클래스 이름으로 호출( = 클래스 메서드 , 정적 메서드) 📌
+- static 메서드 내부에서는 인스턴스 변수를 사용할 수 없음
+  *  인스턴스 생성 전에 호출 될 수 있기 때문
+- static 변수는 사용가능 
+- this 키워드도 사용할수 없다
+
 ```java
 public class Employee {
 
-	public static int serialNum = 1000; 
+	private static int serialNum = 1000; 
 	
 	private int employeeId;
 	private String employeeName;
 	private String department;
+
+    public static int getSerialNum() {
+      return serialNum;
+    }
+
+    public static void setSerialNum(int serialNum) {
+      Employee.serialNum = serialNum; 📌
+    }
+
     ...
 }
 
@@ -136,7 +156,7 @@ public class EmployeeTest {
 	public static void main(String[] args) {
 		Employee employeeLee = new Employee();
 		employeeLee.setEmployeeName("이순신");
-        System.out.println(Employee.serinalNum); 📌
+    System.out.println(Employee.getSerialNum());
 		
 		Employee employeeKim = new Employee();
 		employeeKim.setEmployeeName("김유신");
@@ -145,12 +165,17 @@ public class EmployeeTest {
 }
 
 ```
-메모리 영역
 
-<img src = "../../img/static변수_메모리.png" alt = "static" width="60%" height="60%">
+#### 6-3. 변수 유효범위(scope)와 메모리
+지역변수, 멤버 변수, 클래스 변수는 유효범위와 life cycle, 사용하는 메모가 다름
 
+<img src = "../../img/static_변수별.png" alt = "static" width="60%" height="60%">
 
-#### 7-2. 싱글톤 패턴 (Singleton pattern)
+- static 변수는 프로그램 실행동안 메모리영역을 차지하므로 너무 큰 메모리를 할당하지 않도록 유의
+- 클래스 내부의 여러 메서드에서 사용하는 변수는 멤버 변수로 선언
+- 멤버 변수가 너무 많으면 인스턴스 생성 시 불필요한 메모리가 할당
+
+#### 6-4. 싱글톤 패턴 (Singleton pattern)
 프로그램에서 인스턴스(객체)가 단 한 개만 생성되어야 하는 경우 사용하는 디자인 패턴
 - 서로 자원을 공유할때 주로 사용 ex) 스프링 빈 , (현실)프린터 기계
 - 객체 구현  
@@ -161,6 +186,11 @@ public class EmployeeTest {
 - - - 
 
 ### final 키워드
+변수나 메서드 또는 클래스가 ‘변경 불가능’하도록 만든다.
+- 원시(Primitive) 변수일 때  해당 변수의 값은 변경이 불가능하다.
+- 참조(Reference) 변수일 때 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
+- 메서드에 적용할 때 해당 메서드를 오버라이드할 수 없다.
+- 클래스에 적용 시 해당 클래스의 하위 클래스를 정의할 수 없다.(= 상속받을수 없다)
 
 
 
