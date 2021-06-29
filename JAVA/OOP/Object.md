@@ -184,13 +184,52 @@ public class EmployeeTest {
 - 멤버 변수가 너무 많으면 인스턴스 생성 시 불필요한 메모리가 할당
 
 #### 6-4. 싱글톤 패턴 (Singleton pattern)
-프로그램에서 인스턴스(객체)가 단 한 개만 생성되어야 하는 경우 사용하는 디자인 패턴
+프로그램에서 인스턴스(객체)가 단 한 개만 생성되어야 할때 사용하는 디자인 패턴
 - 서로 자원을 공유할때 주로 사용 ex) 스프링 빈 , (현실)프린터 기계
 - 객체 구현  
   - static 변수, 메서드를 활용하여 구현 할수있음
-  - 생성자는 private으로 선언
+  - 생성자는 private으로 선언 (외부에서 new 할수 없게하기위해)
   - 클래스 내부에 유일한 private 인스턴스 생성
   - 외부에서 유일한 인스턴스를 참조할 수 있는 public 메서드 제공
+    * Calender 클래스는 싱글톤패턴으로 사용되도록 이루어져있음
+
+
+```java
+public class Company {
+
+    private static Company instance = new Company();
+    private Company() {}
+
+    public static Company getInstance(){ // 외부에서 접근 가능하도록
+        if(instance == null){
+            instance = new Company(); // 없을경우 생성 (방어적)
+        }
+        return instance;
+    }
+}
+
+public class CompanyTest {
+    public static void main(String[] args) {
+        Company company1 = Company.getInstance(); // 클래스 이름으로 접근
+        Company company2 = Company.getInstance();
+
+        System.out.println(company1);
+        System.out.println(company2);
+    /*
+        => 참조 변수 주소값 같다
+        Chapter02.ch18.Company@23fc625e
+        Chapter02.ch18.Company@23fc625e
+    */
+
+        Calendar calendar = Calendar.getInstance();
+    }
+}
+
+```
+클래스 다이어그램
+
+<img src = "../../img/static_싱글톤_클래스다이어그램.png" alt = "static" width="40%" height="50%">
+
 - - - 
 
 ### final 키워드
