@@ -13,6 +13,8 @@
 - [생성자](#4.생성자-(constructor))
 - [접근 제어 지시자 & 정보은닉](#5.-접근-제어-지시자와-정보은닉)
 - [static](#6.-static)
+- [final](#final-키워드)
+- [Object Class](#Object-클래스)
 
 
 ### 1. 클래스
@@ -238,8 +240,53 @@ public class CompanyTest {
 - 참조(Reference) 변수일 때 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
 - 메서드에 적용할 때 해당 메서드를 오버라이드할 수 없다.
 - 클래스에 적용 시 해당 클래스의 하위 클래스를 정의할 수 없다.(= 상속받을수 없다)
+- - - 
+### [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) 클래스
 
+#### 1. clone() 메서드
+: 객체를 복제하는 기능 제공
+```java
+class Student implements Cloneable{
+    String name;
+    Student(String name){
+        this.name = name;
+    }
+    //check Exception
+    protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+}
 
+class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("wonmimi");
+        try {
+            Student s2 = (Student)s1.clone();
+            System.out.println(s1.name);
+            System.out.println(s2.name);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+실행 결과 
+: name값이 같은 인스턴스 복제됨
+
+<img src = "../../img/clone_result.png" alt = "clone" width="30%" height="40%">
+
+ 비어있는 Cloneable 인터페이스를 구현하는 이유는 복제 가능함을 VM에 알리는 표시같은 역할 
+ ```java
+  public interface Cloneable {}
+ ```
+
+- - - 
+### 자바 [예외](https://mangkyu.tistory.com/152) 종류
+- 에러(Error)
+- 예외(Exception)
+  * 체크 예외(Check Exception)
+  * 언체크 예외(Uncheck Exception) - RuntimeException 클래스를 상속
 
 
 
