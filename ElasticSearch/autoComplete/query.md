@@ -33,7 +33,7 @@ PUT auto_complete_wm_ngram
         "edge_ngram_tokenizer": {
           "type": "edge_ngram",
           "min_gram": "2",
-          "max_gram": "10"
+          "max_gram": "10",
 					"token_chars": [
             "letter"
           ]
