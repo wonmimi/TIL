@@ -11,11 +11,27 @@
     ]
 ```
 
-=> 로컬에 실행하는 것과 별개로 , sftp 업로드 되지 않도록 / 보통 uploadOnSave = false 로 지정하는게 확실ㅎ 
+=> 로컬에 실행하는 것과 별개로 , sftp 업로드 되지 않도록 <br>
+보통 uploadOnSave = false 로 지정하는게 확실ㅎ 
 
+- 해당 작업 워크스페이스위치에서 (ex) /election-api
+```shell
+composer install
+```
+  => vendor 폴더생김 
+- 서버 composer.json에서 받고 수정
 
-- 터미널 에서 composer install
-- 작업 워크스페이스에서 명령어 실행
+```json
+"require-dev": {
+        "facade/ignition": "^1.4",
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^8.5.8|^9.3.3"
+    },
+
+```
+- 서버 시작
 
 ```bash
 php arisan serve
