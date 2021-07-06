@@ -23,7 +23,7 @@ public interface Cloneable {
 
 
 ## _clone 메서드 구현_
-### a) 가변 상태 참조하지 않는 클래스 
+### 가변 상태 참조하지 않는 클래스 
 - 필드가 기본타입 이거나 불변객체를 참조한다면 super.clone 호출로 충분하다
 ```java
 public class User implements Cloneable{
@@ -63,7 +63,7 @@ public class User implements Cloneable{
 <img width="40%" alt="clone" src="https://user-images.githubusercontent.com/66981136/124473827-bee1a500-ddda-11eb-81a1-bce36abfdf89.png">
 
   
-### b) 가변 상태 참조 클래스
+### 가변 상태 참조 클래스
 ```java
 public class User implements Cloneable{
     private  String name;
@@ -97,8 +97,9 @@ public class User implements Cloneable{
 
 <img width="40%" alt="clone_2" src="https://user-images.githubusercontent.com/66981136/124474440-7b3b6b00-dddb-11eb-83db-67f8f469fe18.png">
 
-- clone은 사실상 객체를 생성하는 생성자와 같은 효과를 내므로, 원본 객체에 영향 끼치지 않는 동시에 복제된 객체의 <b>불변식을 보장해야 한다</b>
 - 클래스가 가변상태인 필드를 가지면 원본과 복제된 클래스가 동시에 수정되어 <b>불변식을 해치게된다</b>
+- clone은 사실상 객체를 생성하는 생성자와 같은 효과를 내므로, 원본 객체에 영향 끼치지 않는 동시에 복제된 객체의 <b>불변식을 보장해야 한다</b>
+
 
 
 > clone을 재귀적으로 호출하여 가변상태의 필드도 복사한다
@@ -119,7 +120,6 @@ public class User implements Cloneable{
 <img width="40%" alt="clone_3" src="https://user-images.githubusercontent.com/66981136/124475505-c3a75880-dddc-11eb-81d6-9006bb1bba53.png">
 
 - ex) stack
-<!-- - final 필드는 새로운 값을 할당할수 없기 때문에 제거 해야 할수도 있다 -->
 
 #### _재귀 호출만으로 충분하지 않을때_
 key-value 쌍을 담은 연결리스트의 엔트리를 참조하는 버킷들의 배열로 이루어진 해시테이블 타입 클래스의 clone
@@ -183,7 +183,7 @@ public class HashTable implements Cloneable{
 <img width="50%" alt="clone_hashtable" src="https://user-images.githubusercontent.com/66981136/124466199-59d58180-ddd1-11eb-84ee-24c5aa63ce3a.png">
 
 
-### c) 복사생성자, 복사 팩터리 방식으로 객체 복사
+## _복사생성자, 복사 팩터리 방식_ 
 > _복사생성자_  <br>
 자신과 같은 클래스의 인스턴스를 인수로 받는 생성자 
 ```java
