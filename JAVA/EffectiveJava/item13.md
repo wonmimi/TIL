@@ -84,7 +84,7 @@ public class User implements Cloneable{
         User s3 = new User("wonmimi2","purple");
         User s4 = s3.clone();
 
-        System.out.println(s3.getName()+", "+s4.getName());
+        System.out.println(s3.getColor()+", "+s4.getColor());
         s3.color.setColor("yellow"); // 값 변경
         System.out.println(s3.color.getColor()+", "+s4.color.getColor());
 
