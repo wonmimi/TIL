@@ -379,11 +379,13 @@ POST /auto_complete_wm_ngram_score/_search?pretty
 ```
 
 v2 인덱스 생성
-
+- tokenizer , completion 혼합
+- 가중치 필드 추가 
+- tokenizer 토큰분석 숫자 (digit) 추가
 ```sql
-######  tokenizer + suggests + score
+
 # 기존 keyword. completion 삭제
-PUT auto_complete_wm_mix
+PUT auto_complete_new
 {
   "settings": {
     "analysis": {
@@ -407,7 +409,8 @@ PUT auto_complete_wm_mix
           "min_gram": "2",
           "max_gram": "10",
           "token_chars": [
-            "letter"
+            "letter",
+            "digit"
           ]
         },
         "edge_ngram_tokenizer": {
@@ -415,7 +418,8 @@ PUT auto_complete_wm_mix
           "min_gram": "2",
           "max_gram": "10",
           "token_chars": [
-            "letter"
+            "letter",
+            "digit"
           ]
         }
       }
@@ -440,7 +444,7 @@ PUT auto_complete_wm_mix
         "keyword_suggest": {
           "type": "completion"
         },
-        "score": {
+        "weight": {
           "type": "byte"
         }
       }
