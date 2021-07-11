@@ -9,12 +9,12 @@
 - - - 
 - [클래스](#1-클래스)
 - [함수와 메서드](#2-함수와-메서드)
-- [인스턴스](#3-인스턴스-(instance))
-- [생성자](#4생성자-(constructor))
+- [인스턴스](#3-인스턴스-instance)
+- [생성자](#4생성자-constructor)
 - [접근 제어 지시자 & 정보은닉](#5-접근-제어-지시자와-정보은닉)
 - [static](#6-static)
+- [추상 클래스](#추상-클래스-abstract)
 - [final](#final-키워드)
-- [Object Class](#Object-클래스)
 
 
 ### 1. 클래스
@@ -233,14 +233,6 @@ public class CompanyTest {
 <img src = "../../img/static_싱글톤_클래스다이어그램.png" alt = "static" width="40%" height="50%">
 
 - - - 
-
-### final 키워드
-변수나 메서드 또는 클래스가 ‘변경 불가능’하도록 만든다.
-- 원시(Primitive) 변수일 때  해당 변수의 값은 변경이 불가능하다.
-- 참조(Reference) 변수일 때 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
-- 메서드에 적용할 때 해당 메서드를 오버라이드할 수 없다.
-- 클래스에 적용 시 해당 클래스의 하위 클래스를 정의할 수 없다.(= 상속받을수 없다)
-- - - 
 ### [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) 클래스
 
 #### 1. clone() 메서드
@@ -280,6 +272,65 @@ class Main {
  ```java
   public interface Cloneable {}
  ```
+
+ ---
+### 추상 클래스 (abstract)
+<=>  구체 클래스 (concrete)
+- abstract 예약어 사용
+- 구현부 없이 메서드의 선언만 있는 추상 메서드(abstract method)를 
+포함한 클래스
+  * 선언 : 반환타입 , 메서드명, 매개변수로 구성
+```java
+  public abstract class Computer { 📌
+    public abstract void display(); //📌 구현부 없음 
+    public abstract void typing();
+  }
+```
+- abstract로 선언된 메서드를 가진 클래스는 abstract로 선언
+- 추상 클래스는 인스턴스화 할수없다 (new 객체생성 X)
+- 모든 메서드가 구현 된 클래스라도 abstract로 선언되면 추상 클래스로 인스턴스화 할 수 없음
+  * 직접 객체 생성하지않고 상속해서 쓰는 용도인 경우가 많다
+```java
+    Computer computer = new Computer(); // ❌ error
+```
+- 추상 클래스의 추상 메서드는 하위 클래스가 상속 하여 구현
+- 추상 클래스 내의 구현 된 메서드 : 하위 클래스가 공통으로 사용하는 메서드
+  * 하위 클래스에서 재정의 가능
+- [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch09)
+
+### 추상클래스 응용 - 템플릿 메서드 패턴
+- 추상 메서드나 구현 메서드를 활용하여 코드의 시나리오를 정의 하는 메서드
+- 프레임워크에서 많이 사용되는 설계 패턴
+- [final](#final-키워드)로 선언하여 하위 클래스에서 재정의 할 수 없게 함
+- 추상 클래스인 상위 클래스에서 템플릿 메서드를 활용하여 전체적인 흐름을 정의 하고, <br>
+ 하위 클래스에서 재정의 해야하는 부분은 추상 메서드로 선언하여 하위 클래스에서 구현 하도록 함
+```java
+    // 코드 시나리오
+    final public void run(){ 📌
+        startAction();
+        display();
+        typing();
+         ...
+    }
+```
+- [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch10)
+
+### final 키워드
+변수나 메서드 또는 클래스가 ‘변경 불가능’하도록 만든다.
+- 원시(Primitive) 변수일 때  해당 변수의 값은 변경이 불가능하다.
+- 참조(Reference) 변수일 때 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
+- 메서드에 적용할 때 해당 메서드를 오버라이드할 수 없다.
+- 클래스에 적용 시 해당 클래스의 하위 클래스를 정의할 수 없다.(= 상속받을수 없다)
+- final 변수는 `클래스명.변수`로 사용 할 수 있다.
+```java
+public class Sample {
+
+	public static final String INTRO = "Good Morgning ~";
+  ...
+  System.out.println(Sample.INTRO); 📌
+}
+
+```
 
 - - - 
 ### 자바 [예외](https://mangkyu.tistory.com/152) 종류
