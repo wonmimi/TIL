@@ -15,6 +15,7 @@
 - [static](#6-static)
 - [추상 클래스](#추상-클래스-abstract)
 - [final](#final-키워드)
+- [인터페이스](#인터페이스-interface)
 
 
 ### 1. 클래스
@@ -335,6 +336,7 @@ public class Sample {
 ### 인터페이스 (interface)
 - 모든 메서드가 추상 메서드로 선언된다 public abstract 
 - 모든 변수는 상수로 선언됨 public static final
+  * 자바 8 부터 [디폴트 메서드](https://siyoon210.tistory.com/95)(default method)와 정적 메서드(static method) 기능의 제공으로 일부 구현 코드가 있음
 - 인터페이스로 인스턴스 생성 할수 없다 
   * 하위클래스에서 구현(implements) 하여 생성
 ```java
@@ -347,7 +349,7 @@ public interface Calc { 📌
 }
 ```
 
-<img width="40%" alt="interface" src="https://user-images.githubusercontent.com/79403710/125202965-22734300-e2b1-11eb-9cde-57976296e4ce.png">
+<img width="180" alt="interface" src="https://user-images.githubusercontent.com/79403710/125202965-22734300-e2b1-11eb-9cde-57976296e4ce.png">
 
 - 인터페이스를 구현한 클래스는 인터페이스 형으로 선언한 변수로 형 변환 할 수 있음 (Type 상속)
 - 상속에서 형 변환과 동일한 의미
@@ -361,6 +363,7 @@ Calc calc = new CompleteCalc();
 -  형 변환되는 경우 인터페이스에 선언된 메서드만 사용가능하다
 - 구현 코드가 없으므로 여러 인터페이스를 구현할 수 있다
   * 클래스 다중삭속은 불가
+- [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch11)
 
 > 인터페이스는 왜쓰는 걸까 ?
 - 클라이언트 코드와의 약속이며 클래스나 프로그램이 제공하는 명세(specification)

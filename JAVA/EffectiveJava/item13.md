@@ -24,7 +24,7 @@ public interface Cloneable {
 
 ## _clone 메서드 구현_
 ### 가변 상태 참조하지 않는 클래스 
-- 필드가 기본타입 이거나 불변객체를 참조한다면 super.clone 호출로 충분하다
+- 필드가 기본타입 이거나 [불변객체](https://velog.io/@conatuseus/Java-Immutable-Object%EB%B6%88%EB%B3%80%EA%B0%9D%EC%B2%B4)를 참조한다면 super.clone 호출로 충분하다
 ```java
 public class User implements Cloneable{
     private  String name;
