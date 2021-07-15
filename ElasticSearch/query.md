@@ -1,4 +1,4 @@
-###  빈값 찾기 
+##  빈값 찾기 
 
 인덱스에서 image_url이 "" 인데이터 조회
 #
@@ -27,7 +27,7 @@ GET /people_backup/_search
 }
 ```
 
-### 데이터 삭제 
+## 데이터 삭제 
 인덱스에서 특정 데이터 또는 전체 (query 데이터)를 삭제
 ```sql
   POST 인덱스명/_delete_by_query
@@ -39,4 +39,21 @@ GET /people_backup/_search
       }
     }
   }
+```
+> php 코드
+```php
+try{
+        $response = $client->deleteByQuery([  
+          'index' => $index,
+          'type' => '_doc',
+          'body' => [
+              'query' => [
+                  'match_all' => (Object)[]
+              ]
+          ]
+        ]);
+      } catch (Exception $e) {
+        $this->error('delete Exception : '.  $e->getMessage());
+        return false;
+      }
 ```

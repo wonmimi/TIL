@@ -14,6 +14,7 @@
 
 에러가 자꾸뜸  [검색](http://ftyjtk.blogspot.com/2018/11/how-do-you-send-bulk-inserts-with-no.html) 해보니 "_type" 을 넣어 줘야함 
 
+> PHP 코드 
 ```php
 for($i = 1; $i < 3; $i++) {
 	$params['body'][] = [
