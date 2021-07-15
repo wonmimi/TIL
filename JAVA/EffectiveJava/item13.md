@@ -210,6 +210,13 @@ Cloneable 방식에서 하였던
 
 
 - - - 
+### 자바 [예외](https://mangkyu.tistory.com/152) 종류
+- 에러(Error)
+- 예외(Exception)
+  * 체크 예외(Check Exception)
+  * 언체크 예외(Uncheck Exception) - RuntimeException 클래스를 상속
+
+- - - 
 
 
 - [참고1](https://k3068.tistory.com/65)
