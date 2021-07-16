@@ -412,6 +412,7 @@ public class GenericPrinter<T> {  📌 // 1️⃣-1
 - 다이아몬드 연산자 내부에서 자료형 생략가능
 ```java
   GenericPrinter<Powder> powderPrinter = new GenericPrinter<Powder>();
+  powderPrinter.setMaterial(new Powder());
   GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<>(); // 타입 생략 가능
   ArrayList list = new ArrayList<>();
 ```
@@ -442,3 +443,45 @@ public class Powder extends Material{
   ...
 }
 ```
+
+### 제네릭 메소드
+- 자료형 매개변수를 메서드의 매개변수나 반환 값으로 가지는 메서드
+  * 자료형 매개 변수가 하나 이상인 경우도 있음
+```java
+  public class Point<T, V> {
+	
+    T x;
+    V y;
+    
+    Point(T x, V y){
+      this.x = x;
+      this.y = y;
+    }
+    
+    public  T getX() {
+        return x;
+    }
+  ...
+  }
+```
+- 제네릭 클래스가 아니어도 내부에 제네릭 메서드 구현 가능
+```java
+  public <자료형 매개변수> 반환형 메서드명 ( 매개변수 ... ) { ... }
+```
+```java
+    public static <T, V> double makeRectangle(Point<T, V>p1, Point<T, V>p2){ 1️⃣
+        double left = ((Number)p1.getX()).doubleValue(); 2️⃣
+        ...
+         double top = ((Number)p1.getY()).doubleValue();
+        ...
+    }
+    public static void main(String[] args) {
+        Point<Integer, Double> p1 = new Point<Integer, Double>(0, 0.0);
+        Point<Integer, Double> p2 = new Point<>(10, 10.0); // 자료형 매개변수형 생략가능
+
+        double size = GenericMethod.<Integer, Double>makeRectangle(p1, p2);
+        ...
+    }
+```
+- 1️⃣ static 사용 [이유](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ziopantazy&logNo=10169604959)
+- 2️⃣ Number 객체 [~value()](https://jamesdreaming.tistory.com/136) 메서드 사용
