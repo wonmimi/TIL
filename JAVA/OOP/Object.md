@@ -485,3 +485,5 @@ public class Powder extends Material{
 ```
 - 1️⃣ static 사용 [이유](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ziopantazy&logNo=10169604959)
 - 2️⃣ Number 객체 [~value()](https://jamesdreaming.tistory.com/136) 메서드 사용
+
+- [컬렉션 프레임워크](../DataStructure.md)
