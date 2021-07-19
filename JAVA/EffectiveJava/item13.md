@@ -215,7 +215,8 @@ Cloneable 방식에서 하였던
 - 예외(Exception)
   * 체크 예외(Check Exception)
   * 언체크 예외(Uncheck Exception) - RuntimeException 클래스를 상속
-
+  
+[예외 종류](https://cheese10yun.github.io/checked-exception/)
 - - - 
 
 
