@@ -92,4 +92,34 @@ __깊은 복사__
     copyLibrary[i].setAuthor(library[i].getAuthor());
   }
 ```
-[예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter02/ch21)
+💻 [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter02/ch21)
+
+> 다차원 배열
+- 이차원 이상으로 구현 된 배열
+- 평면 (이차원 배열) 이나 공간(삼차원 배열)을 활용한 프로그램 구현
+```java
+  int[][] arr = new int[2][3];
+```
+<img width="70%" alt="2차원배열" src="https://user-images.githubusercontent.com/66981136/126509030-930d2acd-5fea-44c7-b900-ae430955da55.png">
+
+
+> ArrayList 
+
+객체 배열을 구현한 클래스
+- 기존의 배열 방식은 배열의 길이를 정하고 요소의 개수가 배열의 길이보다 커지면 배열을 재할당하고 복사해야 한다
+- 배열의 요소를 추가 또는 삭제하면 다른 요소들의 이동 필요
+- `ArrayList는 객체 배열을 좀더 효율적으로 관리`하기 위해 자바에서 제공하는 클래스
+  * 많은 메서드들이 최적의 알고리즘으로 구현되어 있어 각 메서드의 사용 방법 익힐수록 유용
+
+> [__주요 메서드__](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
+  
+<img width="75%" alt="arrayList" src="https://user-images.githubusercontent.com/66981136/126519211-fca04e3b-81e8-4d01-8c8c-f3b9fe33ec60.png">
+
+```java
+  ArrayList<Book> library = new ArrayList<>();
+  library.add(new Book("제목", "작가")); 📌
+
+  Book book1 = library.get(1); 📌
+
+```
+💻 [예제코드]((https://github.com/wonmimi/java/tree/main/src/Chapter02/ch24))
