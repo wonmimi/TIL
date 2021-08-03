@@ -87,16 +87,16 @@
 - 기본 자료형은 사용하는 메모리의 크기가 정해져 있고, 참조 자료형은 클래스에 따라 다름
 - - - 
 
-### 5. 접근 제어 지시자와 정보은닉
+### 5. 접근제어 지시자와 정보은닉
 #### __5-1. 접근 제어 지시자(access modifier)__
 - 클래스 외부에서 클래스의 멤버 변수, 메서드, 생성자를 사용 여부를 지정하는 키워드
-- private : 같은 클래스 내부에서만 접근 가능 ( 외부 클래스, 상속 관계의 클래스에서도 접근 불가)
+- `private` : 같은 클래스 내부에서만 접근 가능 ( 외부 클래스, 상속 관계의 클래스에서도 접근 불가)
   * get() , set() : private 으로 선언된 멤버 변수에 대해 접근, 수정할 수 있는 메서드.  public으로 제공
   * get() 메서드만 제공 되는 건 read-only 필드
 get() 메서드만 제공 되는 경우 read-only 필드
-- 아무것도 없음 (default) : 같은 패키지 내부에서만 접근 가능 ( 상속 관계라도 패키지가 다르면 접근 불가 - import 추가 )
-- protected : 같은 패키지나 상속관계의 클래스에서 접근 가능하고 그 외 외부에서는 접근 할 수 없음
-- public : 클래스의 외부 어디서나 접근 할 수 있음
+- 아무것도 없음 (`default`) : 같은 패키지 내부에서만 접근 가능 ( 상속 관계라도 패키지가 다르면 접근 불가 - import 추가 )
+- `protected` : 같은 패키지나 상속관계의 클래스에서 접근 가능하고 그 외 외부에서는 접근 할 수 없음
+- `public` : 클래스의 외부 어디서나 접근 할 수 있음
 
 #### __5-2. `정보 은닉`__
 외부에서 접근 가능한 최소한의 정보를 오픈하여 객체의 오류를 방지
@@ -298,7 +298,7 @@ class Main {
 - 추상 클래스의 추상 메서드는 하위 클래스가 상속 하여 구현
 - 추상 클래스 내의 구현 된 메서드 : 하위 클래스가 공통으로 사용하는 메서드
   * 하위 클래스에서 재정의 가능
-- 💻  [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch09)
+- 💻  [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter03/ch09)
 
 ### 추상클래스 응용 - 템플릿 메서드 패턴
 - 추상 메서드나 구현 메서드를 활용하여 코드의 시나리오를 정의 하는 메서드
@@ -315,7 +315,7 @@ class Main {
          ...
     }
 ```
-- 💻  [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch10)
+- 💻  [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter03/ch10)
 
 ### final 키워드
 변수나 메서드 또는 클래스가 `변경 불가능`하도록 만든다.
@@ -364,7 +364,7 @@ Calc calc = new CompleteCalc();
 -  형 변환되는 경우 인터페이스에 선언된 메서드만 사용가능하다
 - 구현 코드가 없으므로 여러 인터페이스를 구현할 수 있다
   * 클래스 다중삭속은 불가
-- 💻 [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter03/ch11)
+- 💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter03/ch11)
 
 > 인터페이스는 왜쓰는 걸까 ?
 - 클라이언트 코드와의 약속이며 클래스나 프로그램이 제공하는 명세(specification)

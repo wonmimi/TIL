@@ -92,7 +92,7 @@ __깊은 복사__
     copyLibrary[i].setAuthor(library[i].getAuthor());
   }
 ```
-💻 [예제 코드](https://github.com/wonmimi/java/tree/main/src/Chapter02/ch21)
+💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter02/ch21)
 
 > 다차원 배열
 - 이차원 이상으로 구현 된 배열
@@ -122,4 +122,4 @@ __깊은 복사__
   Book book1 = library.get(1); 📌
 
 ```
-💻 [예제코드]((https://github.com/wonmimi/java/tree/main/src/Chapter02/ch24))
+💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter02/ch24)
