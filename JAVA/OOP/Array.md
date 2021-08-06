@@ -103,7 +103,7 @@ __깊은 복사__
 <img width="70%" alt="2차원배열" src="https://user-images.githubusercontent.com/66981136/126509030-930d2acd-5fea-44c7-b900-ae430955da55.png">
 
 
-> ArrayList 
+>  ### ArrayList 
 
 객체 배열을 구현한 클래스
 - 기존의 배열 방식은 배열의 길이를 정하고 요소의 개수가 배열의 길이보다 커지면 배열을 재할당하고 복사해야 한다
