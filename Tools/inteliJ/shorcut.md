@@ -19,4 +19,3 @@
 - cmd + K : 깃 커맨드창 열기
 - cmd + shift + K : 깃 푸시창 오픈
 - cmd + shift + O : 파일 검색
-- cmd + shift + T : 테스트 파일( 코드 ) 생성 단축키
