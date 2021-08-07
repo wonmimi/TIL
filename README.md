@@ -3,7 +3,6 @@
 <!-- * 마크다운 문법과 친해지기 -->
 - - - 
 
-### Java Programming
 ### [Java Programming](https://github.com/wonmimi/TIL/tree/main/JAVA)
 - OOP
 - [Effective Java](https://github.com/wonmimi/TIL/tree/main/JAVA/EffectiveJava)
