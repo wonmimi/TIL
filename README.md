@@ -4,11 +4,6 @@
 - - - 
 
 ### Java Programming
-- [OOP](./JAVA/OOP/Object.md)
-
-### [Java Programming](https://github.com/wonmimi/TIL/tree/main/JAVA)
-- OOP
-
 ### [Java Programming](https://github.com/wonmimi/TIL/tree/main/JAVA)
 - OOP
 - [Effective Java](https://github.com/wonmimi/TIL/tree/main/JAVA/EffectiveJava)
