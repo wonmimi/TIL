@@ -32,3 +32,6 @@ git commit -m "커밋 메세지"
 #깃헙 구독 해제 
 /github unsubscribe [계정]/[저장소]
 ```
+
+### 커밋 메세지 
+[참고](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
