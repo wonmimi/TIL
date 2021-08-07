@@ -1,20 +1,13 @@
-### Today I Learned 😎
-* 일하면서 || 공부하다가 || 개인프로젝트 중에 경험한 삽질 메모 
-* 마크다운 문법과 친해지기  
+### Today I Learned
+* 일하면서 || 개인 공부 중에 경험한 삽질과 얻은 지식 메모 
+<!-- * 마크다운 문법과 친해지기 -->
 - - - 
 
+### [Java Programming](https://github.com/wonmimi/TIL/tree/main/JAVA)
+- OOP
+- [Effective Java](https://github.com/wonmimi/TIL/tree/main/JAVA/EffectiveJava)
+- 알고리즘
+### [Spring Boot & JPA](https://github.com/wonmimi/TIL/tree/main/SpringBoot)
+### [ElasticSearch](https://github.com/wonmimi/TIL/tree/main/ElasticSearch)
 
-### Spring Boot
-  - [레퍼런스](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines)
-- 00 .  inteliJ [단축키 정리](https://github.com/wonmimi/TIL/blob/main/Tools/inteliJ_shorcut.md)
-- 01 . [annotation](./SpringBoot/annotation.md)
-
-### ElasticSearch
-- 01 . [필드 중복값 검색](./ElasticSearch/duplicate.md)
-- 02 . [test, keyword 차이](./ElasticSearch/fieldType.md)
-
-### Spring Boot
-### JPA
-<!-- ### Algorithm
-- 00 . [정리](./Algorithm/algorithms.md) -->
 
