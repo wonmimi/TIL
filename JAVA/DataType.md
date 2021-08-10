@@ -2,7 +2,7 @@
 > Chap 01
 
 #### 특징
-<img src = "../../img/java_컴파일과정.png" alt = "자바 컴파일" width="55%" height="70%" style=
+<img src = "../img/java_컴파일과정.png" alt = "자바 컴파일" width="55%" height="70%" style=
 "display: block; margin: 0 auto;">
 <!-- ![자바 컴파일](../../img/java_컴파일과정.png) -->
 
@@ -25,12 +25,12 @@
   * 실수 float형은  뒤에 f (3.123f)
 - 기본 자료형 ( <=> 객체 데이터 타입)
 <!-- ![자바 기본 자료형](../../img/java_기본자료형.png) -->
-<img src = "../../img/java_기본자료형.png" alt = "자바 기본 자료형" width="55%" height="70%" style=
+<img src = "../img/java_기본자료형.png" alt = "자바 기본 자료형" width="55%" height="70%" style=
 "display: block; margin: 0 auto;">
 
 - 실수는 부동소수점 방식으로 표현
 
-<img src = "../../img/java-부동소수점.png" alt = "자바 부동소수점" width="55%" height="70%" style=
+<img src = "../img/java-부동소수점.png" alt = "자바 부동소수점" width="55%" height="70%" style=
 "display: block; margin: 0 auto;">
 
 - 문자는 정수(양수)로 표현된 문자셋트 = character set ( ex 아스키 코드, 8bit) 
@@ -52,9 +52,6 @@
   * 자바에서 이미 사용하고 있는 예약어는 사용할 수 없음 (Ex: while, break )
 - 카멜케이스 (camelCase)원칙
 - 모두 숫자 먼저 시작 X
-    
-
-
 
 - - - 
 [참고 강의](https://gitlab.com/easyspubjava/javacoursework)

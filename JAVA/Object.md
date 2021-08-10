@@ -36,9 +36,7 @@
 #### 2-2. 함수 호출 스택(stack) 메모리
 - 함수가 호출될 때 지역 변수들이 사용하는 메모리
 - 함수 실행이 끝나면 자동으로 반환 되는 메모리
-
-
-<img src = "../../img/java-function-stack.png" alt = "stack" width="50%" height="70%">
+- <img src = "../img/java-function-stack.png" alt = "stack" width="50%" height="70%">
 
 #### 2-3. 메서드 (method)
 - 객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수 = 멤버 함수 (member function)
@@ -61,8 +59,7 @@
 - 자바에서 Gabage Collector 가 주기적으로 사용하지 않는 메모리를 수거
   * C, C++에서는 해제시켜야함 (free() , delete)
 - 하나의 클래스에서 여러 인스턴스가 생성되면 각각 다른 메모리주소를 가짐
-
-<img src = "../../img/java_stack_heap.png" alt = "stack" width="50%" height="60%">
+- <img src = "../img/java_stack_heap.png" alt = "stack" width="50%" height="60%">
 
 - - - 
 ### 4.생성자 (constructor)
@@ -126,15 +123,14 @@ public void setMonth(int month) {
 #### 6-1 static (정적) 변수
 
 - 처음 프로그램이 메모리에 로딩될 때 메모리를 할당하여 프로그램 종료시 해제
-
-<img src = "../../img/static변수_memory.png" alt = "static" width="50%" height="60%">
+- <img src = "../img/static변수_memory.png" alt = "static" width="50%" height="60%">
 
 - 인스턴스 생성과 상관 없이 사용 가능하므로 클래스 이름으로 직접 참조 📌
 - = 클래스 변수, 정적변수라고도 함(<-> 인스턴스 변수)
 
 메모리 영역
 
-<img src = "../../img/static변수_메모리.png" alt = "static" width="60%">
+- <img src = "../img/static변수_메모리.png" alt = "static" width="60%">
 
 #### 6-2. static 메서드 
 - 인스턴스 생성과 무관하게 클래스 이름으로 호출( = 클래스 메서드 , 정적 메서드) 📌
@@ -181,7 +177,7 @@ public class EmployeeTest {
 #### 6-3. 변수 유효범위(scope)와 메모리
 지역변수, 멤버 변수, 클래스 변수는 유효범위와 life cycle, 사용하는 메모가 다름
 
-<img src = "../../img/static_변수별.png" alt = "static" width="60%" height="60%">
+- <img src = "../img/static_변수별.png" alt = "static" width="60%" height="60%">
 
 - static 변수는 프로그램 실행동안 메모리영역을 차지하므로 너무 큰 메모리를 할당하지 않도록 유의
 - 클래스 내부의 여러 메서드에서 사용하는 변수는 멤버 변수로 선언
@@ -232,7 +228,7 @@ public class CompanyTest {
 ```
 클래스 다이어그램
 
-<img src = "../../img/static_싱글톤_클래스다이어그램.png" alt = "static" width="40%" height="50%">
+- <img src = "../img/static_싱글톤_클래스다이어그램.png" alt = "static" width="40%" height="50%">
 
 - - - 
 ### [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) 클래스
@@ -268,7 +264,7 @@ class Main {
 실행 결과 
 : name값이 같은 인스턴스 복제됨
 
-<img src = "../../img/clone_result.png" alt = "clone" width="30%" height="40%">
+<img src = "../img/clone_result.png" alt = "clone" width="30%" height="40%">
 
  비어있는 Cloneable 인터페이스를 구현하는 이유는 복제 가능함을 VM에 알리는 표시같은 역할 
  ```java
