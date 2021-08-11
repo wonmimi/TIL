@@ -21,6 +21,7 @@
 - 1Byte = 8bit
 - 리터럴 = 숫자, 문자 , 문자열 지칭
   * 숫자에서 정수는 기본타입이 int , 실수는 double
+    * [int vs Integer](https://growinglastcanyon.tistory.com/6?category=624272)
   * 정수 long 형은 숫자뒤에 L 또는 ㅣ (1234567890L)
   * 실수 float형은  뒤에 f (3.123f)
 - 기본 자료형 ( <=> 객체 데이터 타입)
