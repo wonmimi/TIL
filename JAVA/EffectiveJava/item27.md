@@ -58,14 +58,11 @@ public <T> T[] toArray(T[] a) {
 
 
 - - - 
-[컴파일에러 , 런타임에러](https://codedragon.tistory.com/3509)
 
-[javac --unchecked](https://bgpark.tistory.com/33)
-
-[참고 - 1](https://hirlawldo.tistory.com/79)
-
-[참고 - 2](https://vsfe.tistory.com/45)
-
-[참고 -3 ](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-3/2020-03-20-effective-27item)
-
-[참고 - 4](https://jjingho.tistory.com/71)
+### ref 
+- [컴파일에러 , 런타임에러](https://codedragon.tistory.com/3509)
+- [javac --unchecked](https://bgpark.tistory.com/33)
+- [ref - 1](https://hirlawldo.tistory.com/79)
+- [ref - 2](https://vsfe.tistory.com/45)
+- [ref -3 ](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-3/2020-03-20-effective-27item)
+- [ref - 4](https://jjingho.tistory.com/71)

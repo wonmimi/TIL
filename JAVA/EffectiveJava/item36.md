@@ -50,5 +50,7 @@ public class Text {
 
 
 --- 
-[시프트 연산자](https://vmpo.tistory.com/106)
-[참고 ](https://xlffm3.github.io/java/item36-enum-set/)
+
+### ref 
+- [시프트 연산자](https://vmpo.tistory.com/106)
+- [참고 ](https://xlffm3.github.io/java/item36-enum-set/)

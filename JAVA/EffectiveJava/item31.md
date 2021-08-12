@@ -127,12 +127,9 @@ private static <E> void swapHelper(List<E> list, int i, int j) {
 
 
 - - - 
-[참고 1](https://jaehun2841.github.io/2019/01/26/effective-java-item31/#%EC%84%9C%EB%A1%A0)
-
-[참고 short](https://hirlawldo.tistory.com/83)
-
-[참고 3](https://jaehun2841.github.io/2019/01/26/effective-java-item31/#%EC%8B%AC%ED%99%942-%EC%99%80%EC%9D%BC%EB%93%9C%EC%B9%B4%EB%93%9C%EB%A5%BC-%EC%A0%81%EC%A0%88%ED%9E%88-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC)
-
-[참고 4](https://icarus8050.tistory.com/86)
-
-[참고 5](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-3/2020-03-20-effective-31item)
+### ref 
+- [참고 1](https://jaehun2841.github.io/2019/01/26/effective-java-item31/#%EC%84%9C%EB%A1%A0)
+- [참고 -2](https://hirlawldo.tistory.com/83)
+- [참고 3](https://jaehun2841.github.io/2019/01/26/effective-java-item31/#%EC%8B%AC%ED%99%942-%EC%99%80%EC%9D%BC%EB%93%9C%EC%B9%B4%EB%93%9C%EB%A5%BC-%EC%A0%81%EC%A0%88%ED%9E%88-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC)
+- [참고 4](https://icarus8050.tistory.com/86)
+- [참고 5](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-3/2020-03-20-effective-31item)

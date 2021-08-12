@@ -219,7 +219,7 @@ Cloneable 방식에서 하였던
 [예외 종류](https://cheese10yun.github.io/checked-exception/)
 - - - 
 
-
+### ref 
 - [참고1](https://k3068.tistory.com/65)
 - [참고2](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-1/2020-03-20-effective-13item)
 - [참고3](https://insight-bgh.tistory.com/394)
