@@ -3,17 +3,19 @@
 - 효율적인 자료구조 => 좋은 성능을 가진 알고리즘의 기반
   * => 프로그램의 수행속도와도 밀접한 관련
 ---
-## 컬렉션 프레임워크 (collection framework)
+## 컬렉션 프레임워크 (Collection framework)
 - 자료구조를 구현해 놓은 JDK 라이브러리
 - `java.util` 패키지에 구현
 - 최적화 된 알고리즘을 사용할 수 있도록 한다
 - 여러 구현 클래스와 인터페이스를 활용 하여야 한다
 - <img width="85%" alt="" src="https://user-images.githubusercontent.com/66981136/126039173-05c5c469-7c20-4f02-a796-6d2f83e72df0.png">
-- [+ 참고](https://velog.io/@jyo925/Collections-%ED%81%B4%EB%9E%98%EC%8A%A4)
+- [+ 추가](https://velog.io/@jyo925/Collections-%ED%81%B4%EB%9E%98%EC%8A%A4)
+- Collection 프레임워크 vs Collections 클래스 [차이](https://live-everyday.tistory.com/85)
 
 
 ## Collection 인터페이스
  하나의 요소(element)를 관리
+  * [docs](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Collection.html)
 > ### List 인터페이스
 - 객체를 __`순서`에 따라__ 저장하고 관리하는 메서드가 선언된 인터페이스
 - `중복을 허용`함
@@ -72,12 +74,21 @@
 ---
 ##  Map 인터페이스
 - 쌍(pair)으로 이루어진 객체를 관리하는 메서드들이 선언된 인터페이스
+  *  [docs](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html)
 - `key-value의 쌍`인 객체로 이루어짐
-- key는 `중복을 허용하지 않음` 유일
-- HashTable, `HashMap`, Properties, TreeMap 등이 Map 인터페이스를 구현 함
+- key는 `중복을 허용하지 않음`. 유일
+- HashTable, `HashMap`, Properties, [`TreeMap`](#treemap-클래스) 등이 Map 인터페이스를 구현 함
+- map의 내부 인터페이스인 [Map.Entry](https://codedragon.tistory.com/6046) 인터페이스
 
-[ 맵 출력 ](https://stove99.tistory.com/96) / 
-[ 맵 정렬 - 값 ](https://junghn.tistory.com/entry/JAVA-Map%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EA%B0%92Value%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%EB%B0%A9%EB%B2%95-%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C)
+  ### 🏷 HashMap 클래스
+  Map 인터페이스 구현
+  - 검색을 위한 자료구조
+  - key를 이용하여 값을 저장( `put(키, 값)`)하고 key를 이용하여 값을 꺼내오는 방식( `get(키)` ) 
+    *  hash 알고리즘으로 구현
+  - key가 되는 객체는 중복될 수 없고 __객체의 유일성을 비교__ 를 위해 필요시 `equals()`와 `hashCode() `메서드 재정의  ( = hashSet )
+
+  - 💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter05/ch14_HashMap)
+  - [ 맵 출력 ](https://stove99.tistory.com/96) /  [ 맵 정렬 - 값 ](https://junghn.tistory.com/entry/JAVA-Map%EC%97%90%EC%84%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EA%B0%92Value%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%EB%B0%A9%EB%B2%95-%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C)
 
 ---
 > ### length, length(), size() 차이
@@ -107,6 +118,7 @@ Collection 요소를 순회 = 컬렉션 프레임워크에 저장된 요소들�
 - java.util 패키지
 - 순서가 있는 List인터페이스의 경우는 Iterator를 get(i)로 접근 가능
 - Set 인터페이스의 경우 get(i) 메서드가 제공되지 않으므로 Iterator 활용
+- Map은 KeySet() , EntrySet(), values() ... 으로 활용
 
 __주요 메소드__
 - boolean `hasNext()` : 이후에 요소가 더 있는지 체크 있으면 true
@@ -139,7 +151,8 @@ __주요 메소드__
 [참고1](https://st-lab.tistory.com/243) /
 [참고2](https://m.blog.naver.com/occidere/220918234464) /
 [참고3](http://tcpschool.com/java/java_collectionFramework_comparable)
-- ### TreeSet 클래스
+
+> ### TreeSet 클래스
 객체의 정렬에 사용하는 클래스(sorted 계열))
 - Set 인터페이스를 구현하여 중복을 허용하지 않고, 오름차순이나 내림차순으로 객체를 정렬
 - 내부적으로 `이진검색트리(binary search tree)`로 구현됨
@@ -148,3 +161,9 @@ __주요 메소드__
   * String, Integer등 JDK의 많은 클래스들이 이미 Comparable을 구현 (기본 오름차순)
 
 - 💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter05/ch13_TreeSet)
+
+
+> ### TreeMap 클래스
+  &nbsp; Map 인터페이스를 구현 ( [TreeSet](#treeset-클래스) + [HashMap](#map-인터페이스) )
+  - key가 되는 클래스에 Comparable이나 Comparator인터페이스를 구현함으로써 ( => treeSet)  <br>key-value 쌍의 자료를 key값 기준으로 정렬하여 관리 할 수 있음 ( => hashMap )
+  
