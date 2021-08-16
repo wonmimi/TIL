@@ -220,7 +220,8 @@ Cloneable 방식에서 하였던
 - - - 
 
 ### ref 
-- [참고1](https://k3068.tistory.com/65)
-- [참고2](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-1/2020-03-20-effective-13item)
-- [참고3](https://insight-bgh.tistory.com/394)
-- [참고4](https://mongsil1025.github.io/book/effective-java/item13/)
+- Effectiva Java 3판
+<!-- - [ref 1](https://k3068.tistory.com/65)
+- [ref 2](https://incheol-jung.gitbook.io/docs/study/effective-java/undefined-1/2020-03-20-effective-13item)
+- [ref 3](https://insight-bgh.tistory.com/394)
+- [ref 4](https://mongsil1025.github.io/book/effective-java/item13/) -->

@@ -96,8 +96,8 @@ public static void main(String[] args) {
 
 ---
 ### ref 
-- [참고 1](https://it-mesung.tistory.com/192)
-- [참고 2](https://insight-bgh.tistory.com/405)
-- [참고 3](https://yhmane.tistory.com/182#recentComments)
-- [참고 3](https://icarus8050.tistory.com/77?category=419017)
+<!-- - [ref 1](https://it-mesung.tistory.com/192)
+- [ref 2](https://insight-bgh.tistory.com/405)
+- [ref 3](https://yhmane.tistory.com/182#recentComments)
+- [ref 3](https://icarus8050.tistory.com/77?category=419017) -->
 - [디폴트 메서드](https://frontierdev.tistory.com/67)
