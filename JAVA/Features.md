@@ -26,14 +26,12 @@
 배열, 컬렉션을 대상으로 연산을 수행
 - 자료에 대한 스트림을 생성하여 연산을 수행하면 스트림은 소모
 - 스트림 연산은 기존 자료를 변경하지 않음
-
-메소드
-- `map()` :  요소들을 특정조건에 해당하는 값으로 변환
-- `filter()`는 요소들을 조건에 따라 걸러내는 작업 
-- `sorted()`는 요소들을 정렬해주는 작업
-```java
-  sList.stream().filter(s->s.length() >= 5).forEach(s->System.out.println(s));
-
-  list.stream().map(s->s.toUpperCase());
-```
+- __메소드__
+  - `map()` :  요소들을 특정조건에 해당하는 값으로 변환
+  - `filter()`는 요소들을 조건에 따라 걸러내는 작업 
+  - `sorted()`는 요소들을 정렬해주는 작업
+  - ```java
+      sList.stream().filter(s->s.length() >= 5).forEach(s->System.out.println(s));
+      list.stream().map(s->s.toUpperCase());
+    ```
 
