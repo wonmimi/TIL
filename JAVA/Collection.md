@@ -94,13 +94,13 @@
 > ### length, length(), size() 차이
 - length
   -  arrays(int[], double[], String[])
-  - length는 배열의 길이를 알고자 할때 사용된다.
+  - length는 `배열`의 길이를 알고자 할때 사용된다.
 - length()
   - String related Object(String, StringBuilder etc)
-  - length()는 문자열의 길이를 알고자 할때 사용된다.
+  - length()는 `문자열`의 길이를 알고자 할때 사용된다.
 - size()
   - Collection Object(ArrayList, Set etc)
-  - size()는 컬렉션프레임워크 타입의 길이를 알고자 할때 사용된다.
+  - size()는 `컬렉션프레임워크 타입`의 길이를 알고자 할때 사용된다.
 
 ```java
 int[] arr = new int[7];
