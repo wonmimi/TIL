@@ -6,7 +6,9 @@
 
   - <img width="90%" alt="DFS_2" src="https://user-images.githubusercontent.com/79403710/130129524-8463993c-1d7d-4b95-91d9-daa5e533d3a9.png">
 
-- [💻 구현 코드](https://github.com/wonmimi/java-programming-skills/blob/main/src/Algorithm/BOJ/CategoryPractice/DFS.java)
+- [💻 구현 코드](https://github.com/wonmimi/java-programming-skills/blob/main/src/Algorithm/CategoryPractice/DFS.java)
+
+문제 1)
 
 
 ## 2. BFS
@@ -15,6 +17,6 @@
   * <img width="90%" alt="BFS_1" src="https://user-images.githubusercontent.com/79403710/130129515-9d0ba4ec-ce1e-4987-91c3-1d1287f40966.png">
   * <img width="90%" alt="BFS_2" src="https://user-images.githubusercontent.com/79403710/130129499-2c08b803-7ab5-4ffb-a9d4-2ca52bee8dab.png">
 
-- [💻 구현 코드](https://github.com/wonmimi/java-programming-skills/blob/main/src/Algorithm/BOJ/CategoryPractice/BFS.java)
+- [💻 구현 코드](https://github.com/wonmimi/java-programming-skills/blob/main/src/Algorithm/CategoryPractice/BFS.java)
 
 
