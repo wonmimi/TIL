@@ -9,7 +9,7 @@ public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Lon
 - 스프링 데이터가 제공하는 JpaRepository 가 자동으로 SpringDataJpaMemberRepository 를 확인하고 구현체로 만들어 스프링빈에 자동 등록
 - interface 는 다중상속이 된다.
 
-![캡쳐 이미지](../../img/jparepository.png)
+  <img width="55%" alt="" src="../../img/jparepository.png">
 
 - 인터페이스를 통한 기본적인 CRUD
 - 기본, 공통적인것들 메소드 ( findById ... )로 제공

@@ -1,7 +1,7 @@
 ### InteliJ Gradle 대신 자바 직접 실행
   - 기본 설정인 Gradle 로 실행하면 속도가 느림 
   - 자바로 바로 실행해서 실행속도를 높임
-  ![img](../img/buildSetting.png)
+    <img width="70%" alt="" src="../img/buildSetting.png">
 - - - 
 ### 내장 WAS 사용 
   외장 으로 사용하지 않기때문에 서버 변동 (버전 업)이 있을경우에도 무리가 없다.
