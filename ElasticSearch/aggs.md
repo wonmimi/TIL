@@ -1,4 +1,4 @@
-#### 1. 날짜 필드 연도별 group by 
+### 1. 날짜 필드 연도별 group by 
 - query 로 데이터 조건 설정 ( = where)
 - aggs  : regdate 필드값의 desc 순으로 group by
   - aggs : top_hits 로 해당 group에 hits 출력
@@ -68,10 +68,13 @@ GET /articles/_search
 }
 ```
 
-[ 결과 ] <br> 
-키 field : regdate값을 desc 순으로 데이터 group by 
-doc_count로 hits별 갯수 확인하기 용이 (keyed : true = 객체 키값으로 필드값 출력 ) 
+### [ 결과 ] 
+- 키 field : regdate값을 desc 순으로 데이터 group by 
+- doc_count로 hits별 갯수 확인하기 용이 (`keyed : true` → 객체 키값으로 필드값 출력 ) 
 ![aggs-date](../img/ELS-aggs-date.png) 
 
-[참고 - aggs range](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-range-aggregation.html) <br>
-[참고 - aggs top_hits](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-top-hits-aggregation.html)
+
+---
+### ref
+- [참고 - aggs range](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-range-aggregation.html) <br>
+- [참고 - aggs top_hits](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-top-hits-aggregation.html)

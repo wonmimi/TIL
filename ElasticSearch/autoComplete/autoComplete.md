@@ -31,9 +31,6 @@ GET search_logs_v2/_search
 
  정확도 떨어짐 ( ex : 작성중 검색 ..  )
 
- [참고 - prefix](https://renuevo.github.io/elastic/autocomplete/elastic-autocomplete-1/)
- 
- [참고 - 서적](http://preview.hanbit.co.kr/2742/sample_ebook.pdf)
 - - - 
 ### 2) tokenizer ( ngram , edge ngram ) 설정
 
@@ -41,11 +38,6 @@ GET search_logs_v2/_search
 
 - edge-ngram : 토큰의 처음부터 설정한 길이만큼 잘라서 토큰화 하는 n-gram
 
- 1) [참고- 1](https://esbook.kimjmin.net/06-text-analysis/6.6-token-filter/6.6.4-ngram-edge-ngram-shingle) 
- 2) [참고 - 2](https://velog.io/@dahea0512/Elasticsearch-Token-Filter-%EC%A0%95%EB%A6%AC)
- 3) [참고 - analyzer ](https://renuevo.github.io/elastic/autocomplete/elastic-autocomplete-2/)
- 3) [참고 - 3 ](https://www.skyer9.pe.kr/wordpress/?p=1101)
- 4) [참고 - 4 ](https://pythonq.com/so/autocomplete/1443043)
 
 ```sql
 # 인덱스 매핑 예시
@@ -100,9 +92,21 @@ prefix 보완, 중간, 끝단어 제안
 
 ### 3)  completion을 이용한 자동완성
 
-[suggest API](./suggest.md)
+🔖 [suggest API 정리 ](./suggest.md)
 
-- - - 
+<br>
 
 ### 4) 유형별 인덱스 생성
-[query](./query.md)
+🔖 [인덱스 생성 쿼리 정리](./query.md)
+
+---
+### ref
+- #### 1
+  * [참고 - prefix](https://renuevo.github.io/elastic/autocomplete/elastic-autocomplete-1/)
+  * [참고 - 서적](http://preview.hanbit.co.kr/2742/sample_ebook.pdf)
+- #### 2
+  * [참고 -1 ](https://esbook.kimjmin.net/06-text-analysis/6.6-token-filter/6.6.4-ngram-edge-ngram-shingle) 
+  * [참고 - 2 ](https://velog.io/@dahea0512/Elasticsearch-Token-Filter-%EC%A0%95%EB%A6%AC)
+  * [참고 - analyzer ](https://renuevo.github.io/elastic/autocomplete/elastic-autocomplete-2/)
+  * [참고 - 3 ](https://www.skyer9.pe.kr/wordpress/?p=1101)
+  * [참고 - 4 ](https://pythonq.com/so/autocomplete/1443043)
