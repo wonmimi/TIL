@@ -91,5 +91,7 @@ public class TimeTraceAOP {
 - DI(의존성 주입)의 장점을 이용한 기술
 - java generate 문법을 이용한 AOP기술도 있다.
 
-[annotaion 참고](https://galid1.tistory.com/498)
-[참고2](https://velog.io/@ayoung0073/springboot-AOP)
+---
+### ref
+- [annotaion](https://galid1.tistory.com/498)
+- [참고](https://velog.io/@ayoung0073/springboot-AOP)

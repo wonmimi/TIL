@@ -1,6 +1,4 @@
 ## SpringBoot 
-- [레퍼런스](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#boot-features-spring-mvc-template-engines)
---- 
 ### 프로젝트 생성
   - [스타터 페이지](https://start.spring.io/) 에서 프로젝트 생성 
   ![setting 화면](../img/jpa_setting.png)
@@ -35,3 +33,5 @@
     }
   ```
 - - - 
+Ref
+- [레퍼런스](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#boot-features-spring-mvc-template-engines)
