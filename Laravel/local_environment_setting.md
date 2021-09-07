@@ -1,4 +1,4 @@
-### 라라벨 로컬 환경 컴포저 셋팅
+## 라라벨 로컬 환경 컴포저 셋팅
 - sfrp.json 파일 수정 (tool :vsCode)
 ```json
 "uploadOnSave": false,
