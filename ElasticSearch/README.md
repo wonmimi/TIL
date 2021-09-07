@@ -9,6 +9,6 @@
   * [aggs](./aggs.md) 활용
 - 🗂 대량 데이터 ([bulk](./bulk.md)) 넣기
 - 🗂 자동완성 기능 구현
-  * [개요]((./autoComplete/autoComplete.md))
-  * [suggest API ](./suggest.md)
-  * [유형별 인덱스 생성](./query.md)
+  * [개요](./autoComplete/autoComplete.md)
+  * [suggest API ](./autoComplete/suggest.md)
+  * [유형별 인덱스 생성](./autoComplete/query.md)
