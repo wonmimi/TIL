@@ -32,5 +32,6 @@ _매개변수 타입으로 클래스가 아니라 인터페이스를 사용하�
 
 - - - 
 ### REF
+- Effectiva Java 3판
 - [순서 정책](https://flatsun.tistory.com/67)
 - [ref](https://xlffm3.github.io/java/item64-use-interface-when-referencing-instance/)
