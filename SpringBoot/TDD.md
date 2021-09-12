@@ -11,4 +11,6 @@
 - test 디렉토리에 appication.properties가 없으면 main 디렉토리 설정을 그대로 가져온다 
   * 그 외 application-oauth.properties (예시) .. 등은 가져오지않으므로 테스트환경에서 임의 테스트값을 설정해줘야한다.
 
-[TDD 설명 참고](https://repo.yona.io/doortts/blog/issue/1)
+---
+### ref
+- [TDD 설명 참고](https://repo.yona.io/doortts/blog/issue/1)

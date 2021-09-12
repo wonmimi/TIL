@@ -3,7 +3,7 @@
 
 - 공통 관심 사항(cross-cutting concern) / 핵심 관심 사항(core concern) 분리
 
-![AOP](../img/AOP.png)
+  <img width="65%" alt="" src="../img/AOP.png">
 
 service 소스코드에서 AOP 적용전 Service 코드
 
@@ -71,18 +71,22 @@ public class TimeTraceAOP {
 - @Around : [Advice](./annotation.md)의 종류 중 하나(총 5가지)
 
 #
-//  회원 목록 페이지 접속시, 
-![AOP 적용](../img/AOP_2.png)
+ 회원 목록 페이지 접속시, 
+
+<img width="70%" alt="" src="../img/AOP_2.png">
+
 => 회원가입, 회원 조회등 핵심 관심사항과 시간을 측정하는 공통 관심 사항을 분리
 
 ### 동작원리 
-![proxy1](../img/AOP_proxy_1.png)
+  <img width="65%" alt="" src="../img/AOP_proxy_1.png">
+
 컨테이너에 스프링빈을 등록할때 가상(중계) 빈을 등록 후 실제 service 실행
 
-![proxy1](../img/AOP_proxy_console.png "프록시 확인")
+<img width="70%" alt="" src="../img/AOP_proxy_console.png">
+
 콘솔창에서 프록시 생성 확인
 
-![proxy1](../img/AOP_proxy_2.png "컨테이너 전체")
+<img width="70%" alt="" src="../img/AOP_proxy_2.png">
 
 - - - 
 
@@ -91,5 +95,7 @@ public class TimeTraceAOP {
 - DI(의존성 주입)의 장점을 이용한 기술
 - java generate 문법을 이용한 AOP기술도 있다.
 
-[annotaion 참고](https://galid1.tistory.com/498)
-[참고2](https://velog.io/@ayoung0073/springboot-AOP)
+---
+### ref
+- [annotaion](https://galid1.tistory.com/498)
+- [참고](https://velog.io/@ayoung0073/springboot-AOP)

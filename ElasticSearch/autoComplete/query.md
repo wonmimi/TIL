@@ -1,4 +1,4 @@
-# 2. 타입별 auto_complete 인덱스 테스트
+#  타입별 auto_complete 인덱스 테스트
 
 > v1 
 ### 1. 인덱스 생성
@@ -67,7 +67,7 @@ PUT auto_complete_wm_ngram
 }
 ```
 
-[ 인덱스 설정을 바꾸고싶다면 ?](../modify_index.md)
+[ 인덱스 설정을 바꾸고싶다면 ?](./modify_index.md)
 
 ### 2. 데이터 입력
 

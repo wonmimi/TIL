@@ -52,5 +52,5 @@ GET /articles/_search
   ]
 }
 ````
-text 타입 arc_category_path 로 검색 했을땐 result : 0 이었으나 , 
-keyword 타입인 arc_category_code로 검색했을떈 결과가 나옴
+- `text` 타입 arc_category_path 로 검색 했을땐 result : 0 이었으나 , 
+- `keyword` 타입인 arc_category_code로 검색했을땐 결과가 나옴

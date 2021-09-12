@@ -116,7 +116,7 @@ public class Posts extends BaseTimeEntity {
   * mockMvc 객체에서만 작동
 
 
- #
-
+---
+### ref
 - [트랜잭션](https://devuna.tistory.com/30)
 - [더티체킹](https://jojoldu.tistory.com/415)
