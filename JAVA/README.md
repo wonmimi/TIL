@@ -16,3 +16,5 @@
     * [item 36](./EffectiveJava/item36.md)
     * [item 48](./EffectiveJava/item48.md)
     * [item 50](./EffectiveJava/item50.md)
+    * [item 64](./EffectiveJava/item64.md)
+    * [item 76](./EffectiveJava/item76.md)
