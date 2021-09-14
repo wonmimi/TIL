@@ -142,14 +142,15 @@ public void setMonth(int month) {
 ```java
 public class Employee {
 
-	private static int serialNum = 1000; 
+	private static int serialNum = 1000;  📌
 	
 	private int employeeId;
 	private String employeeName;
 	private String department;
 
-    public static int getSerialNum() {
-      return serialNum;
+  public Employee(){
+      serialNum++; 📌
+      employeeId = serialNum;
     }
 
     public static void setSerialNum(int serialNum) {
@@ -173,6 +174,7 @@ public class EmployeeTest {
 }
 
 ```
+- 💻 [구현 코드 - static](https://github.com/wonmimi/java-programming-skills/blob/main/src/GrammarPractice/Chapter02/ch16/Employee.java)
 
 #### 6-3. 변수 유효범위(scope)와 메모리
 지역변수, 멤버 변수, 클래스 변수는 유효범위와 life cycle, 사용하는 메모가 다름
