@@ -2,6 +2,13 @@
 - 프로그램에서 사용할 데이터들을 메모리에서 관리하는 여러 구현방법
 - 효율적인 자료구조 => 좋은 성능을 가진 알고리즘의 기반
   * => 프로그램의 수행속도와도 밀접한 관련
+
+- 🔖 Collection 인터페이스 
+  * [List 인터페이스](#list-인터페이스)
+  * [Set 인터페이스](#set-인터페이스)
+- 🔖 [Map 인터페이스]
+  * [map 인터페이스](#map-인터페이스)
+
 ---
 ## 컬렉션 프레임워크 (Collection framework)
 - 자료구조를 구현해 놓은 JDK 라이브러리
@@ -11,7 +18,6 @@
 - <img width="85%" alt="" src="https://user-images.githubusercontent.com/66981136/126039173-05c5c469-7c20-4f02-a796-6d2f83e72df0.png">
 - [+ 추가](https://velog.io/@jyo925/Collections-%ED%81%B4%EB%9E%98%EC%8A%A4)
 - Collection 프레임워크 vs Collections 클래스 [차이](https://live-everyday.tistory.com/85)
-
 
 ## Collection 인터페이스
  하나의 요소(element)를 관리
@@ -69,7 +75,7 @@
   - 인스턴스의 동일성 구현을 위해 필요에 따라 `equals()`와 [`hashCode()`](https://reakwon.tistory.com/83)메소드를 재정의함
     * jdk내부에 hashCode() 내장 되어있다 (String , Integer ... )
 
-  - 💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter05/ch11_Set)
+  - 💻 [예제 코드](https://github.com/wonmimi/java-programming-skills/tree/main/src/GrammarPractice/Chapter05/ch12_Set)
   
 ---
 ##  Map 인터페이스
