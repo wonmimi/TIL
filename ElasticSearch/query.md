@@ -1,3 +1,10 @@
+
+
+- [빈값 찾기](#빈값-찾기)
+- [데이터 삭제](#데이터-삭제)
+- [중복데이터 찾기](#중복데이터-찾기)
+
+
 ##  빈값 찾기 
 
 인덱스에서 image_url이 "" 인데이터 조회
@@ -82,3 +89,7 @@ GET /people/_search
 ```
 
 - [참고](https://www.python2.net/questions-145910.htm)
+
+## queryDSL
+- [docs](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-request-query.html#search-request-query)
+  * [queryDSL](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl.html)
