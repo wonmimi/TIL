@@ -18,3 +18,4 @@
     * [item 50](./EffectiveJava/item50.md)
     * [item 64](./EffectiveJava/item64.md)
     * [item 76](./EffectiveJava/item76.md)
+    * [item 88](./EffectiveJava/item88.md)
